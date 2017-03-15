@@ -1,0 +1,247 @@
+@media (min-width: 992px)
+{
+	.page-content-wrapper .page-content 
+	{
+		padding: 0px 0 0 20px;
+	}	
+}
+
+html, body 
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map 
+{
+	width 	: 100%;
+    height	: 97%;
+  	position:absolute; 
+  	top: 0; 
+  	left: 0; 
+  	z-index: 0; 
+}
+.marker_labels
+{
+	 white-space: nowrap;
+}
+
+#page
+{
+	padding: 10px 10px;
+	position: relative; 
+	z-index: 3;
+}
+
+.btn-login-choose
+{
+	margin: 5px 15px 0px 0px;
+}
+
+.modal-backdrop
+{
+	z-index: 2;
+}
+.modal-backdrop.in{
+	/*opacity: 0;*/
+}
+.form-group.form-md-line-input
+{
+	margin: 0px 0px 20px;
+}
+
+.page-footer-fixed .page-boxed .page-footer, .page-footer-fixed .page-footer{
+	background-color: #FFFFFF;
+}
+
+.footer{
+	min-height: 35px;
+}
+.footer .navbar-brand{
+	font-size: 14px;
+	float: left;
+    padding: 15px;
+    line-height: 10px;
+    height: 40px;
+}
+.footer .navbar-nav>li>a {
+    line-height: 5px;
+}
+
+.portlet_objek_wisata{
+	padding: 10px 5px 3px !important;
+}
+.portlet_objek_wisata .portlet-title{
+	margin-bottom: 0px;
+}
+#acc_list_objek{
+	max-height: 350px;
+	overflow-y: auto;
+}
+#panel_kategori_1{
+	margin-top: 0px;
+}
+#acc_list_objek .panel-heading
+{
+	border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+#acc_list_objek::-webkit-scrollbar, .modal-body::-webkit-scrollbar, #hasilPetunjukArah::-webkit-scrollbar  {
+    width: 5px;
+    /*display: none;*/
+}
+#acc_list_objek::-webkit-scrollbar-track, .modal-body::-webkit-scrollbar-track, #hasilPetunjukArah::-webkit-scrollbar-track {
+    background-color: #eaeaea;
+    border-left: 1px solid #ccc;
+}
+#acc_list_objek::-webkit-scrollbar-thumb, .modal-body::-webkit-scrollbar-thumb, #hasilPetunjukArah::-webkit-scrollbar-thumb   {
+    background-color: #ccc;
+}
+#acc_list_objek::-webkit-scrollbar-thumb:hover, .modal-body::-webkit-scrollbar-thumb:hover, #hasilPetunjukArah::-webkit-scrollbar-thumb:hover  {
+	background-color: #aaa;
+}
+
+.modal-content{
+	border: solid 1px #CCCCCC;
+}
+
+#acc_list_objek .panel-title{
+	font-size: 14px;
+}
+#acc_list_objek .jml_objek{
+	font-weight: bold;
+	float: right;
+	/*line-height: 2.4;*/
+	margin-top: 5px;
+	width: 20%;
+}
+#acc_list_objek .nama_kategori_objek{
+	width: 80%;
+}
+.btn-group-justified>.btn, .btn-group-justified>.btn-group
+{
+	width: 50%;
+}
+.jml_objek_master{
+	font-weight: bold;
+	float: right;
+	/*line-height: 2.4;*/
+	margin-top: -2px;
+	width: 20%;
+}
+
+
+/*.jml_objek{
+	font-weight: bold;
+	float: right;
+	line-height: 1.4;
+}
+*/#acc_list_objek .list-group h5{
+	margin-bottom: 0px;
+	font-size: 13px;
+}
+
+#w-petunjuk-arah .form-control{
+	font-size: 13px;	
+}
+
+
+/* Map Directions*/
+#hasilPetunjukArah{
+	height: 300px; 
+	overflow-y: auto;
+	font-size: 13px !important;
+}
+.adp-directions{
+	width: 98%;
+}
+img.adp-marker{
+	margin: 10px !important;
+}
+.adp-summary{
+	padding: 10px !important;
+}
+/* End Of Map Directions */
+
+.media-body p{
+	font-size: 13px;
+}
+
+.widget_info a{
+	box-shadow: none !important;
+	text-align: left;
+}
+.widget_info a.btn-danger{
+	text-align: center;	
+}
+
+/* Mobile */
+#mob_panel_kategori .panel{
+	box-shadow: none !important;
+}
+#mob_panel_kategori #mob_panel_kategori_list .panel-body{
+	padding: 0px;
+	border-top: none;
+}
+
+@media (max-width: 992px)
+{
+	#page{
+		padding: 0px !important;
+	}
+	#page .home-content{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	#map{
+		margin-top: 58px;
+    	height: 82%;
+	}
+	.footer .navbar-brand{
+		font-size: 14px;
+		float: left;
+	    padding: 15px 0px;
+	    line-height: 10px;
+	    height: 40px;
+	}
+	.btn-login-choose
+	{
+		margin: -2px 15px 0px 0px;
+	}
+	.panel-group {
+    	margin-bottom: 7px;
+	}
+
+	.accordion .panel .panel-title .accordion-toggle {
+	    display: block;
+	    padding: 1px 15px;
+	}
+
+	#acc_list_objek{
+		/*max-height: 250px !important;*/
+		/*overflow-y: auto;*/
+	}
+
+	.portlet_objek_wisata{
+		padding: 10px 5px 3px !important;
+		margin-bottom: 40px;
+	}
+
+
+}
+.list-group-item{
+	overflow-y: auto;
+}
+/* End of Mobile */
+
+.modal-footer {
+    border-top: 1px solid #e5e5e5 !important;
+}
+
+.blog-content-2 .blog-single-content {
+    padding: 20px 30px 15px !important;
+    background-color: #fff;
+}
+
+
