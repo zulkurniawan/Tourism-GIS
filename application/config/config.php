@@ -31,7 +31,7 @@ if(isset($_SERVER['HTTPS']))
 }
 $root = $http . "://" . $_SERVER['HTTP_HOST'];
 $root .= dirname($_SERVER['SCRIPT_NAME']);
-$config['base_url'] = $root;
+$config['base_url'] = 'http://tourism-gis.dev/';
 // $config['base_url'] 	= 'https://visitkebumennow.com';
 // $config['base_url'] 	= 'http://kebu.men';
 
