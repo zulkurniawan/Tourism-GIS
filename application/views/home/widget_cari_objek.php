@@ -17,7 +17,7 @@
                         <h4 class="panel-title">
                             <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#mob_panel_kategori" href="#mob_panel_kategori_list"> 
                                 <h5>
-                                    <strong><i class="fa fa-globe"></i>&nbsp;&nbsp;Objek</strong> 
+                                    <strong><i class="fa fa-bars"></i>&nbsp;&nbsp;Objek</strong> 
                                     <span class="jml_objek_master">
                                         <button type="button" class="btn white btn-block btn-xs" id="jml_all_objek"></button>
                                     </span>

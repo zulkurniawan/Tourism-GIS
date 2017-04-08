@@ -5,7 +5,7 @@
         <title><?=$meta_title?></title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-	<meta name="google-site-verification" content="tzDAhHVClAt3uFEzsAUFTmOj8vPkTt79UyKC5SWbUrs" />
+        <meta name="google-site-verification" content="tzDAhHVClAt3uFEzsAUFTmOj8vPkTt79UyKC5SWbUrs" />
         <meta content="<?=$meta_author?>" name="author" />
         <meta content="<?=$meta_description?>" name="description" />
         <meta content="<?=$meta_keywords?>" name="keywords" />
@@ -42,6 +42,13 @@
     </head>
 
     <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md page-footer-fixed">
+        <div id="preloader" class="preloader-wrapper">
+            <div class="preloader">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
         <?php
             if(!empty($main_content))
             { 
@@ -270,6 +277,14 @@
                     window.location = "<?=site_url('API/auth/logout')?>";
                 }
             <?php } ?>
+        </script>
+
+        <script>
+            $('html').addClass('is-loading');
+            $(window).load(function () {
+                            $('#preloader').delay(350).fadeOut('slow');
+                $('html').removeClass('is-loading');
+            });
         </script>
         
        

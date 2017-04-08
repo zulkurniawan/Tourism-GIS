@@ -247,11 +247,11 @@
 			            rotateControl: true,
 			        });	
 			        marker_single  = new google.maps.Marker({
-			                            position    : myLatLng,
-			                            map         : map_single,
-			                            animation   : google.maps.Animation.DROP,
-			                            title       : result.data.nama,
-			                        });       
+                            position    : myLatLng,
+                            map         : map_single,
+                            animation   : google.maps.Animation.DROP,
+                            title       : result.data.nama,
+                        });       
 		
 		        	// Panorama 
 		        	if(result.data.street_view_url == null || result.data.street_view_url == '')
