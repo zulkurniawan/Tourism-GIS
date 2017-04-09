@@ -342,7 +342,8 @@ img.adp-marker {
 .preloader-wrapper {
     width: 100vw;
     height: 100vh;
-    background: #fff;
+    background: transparent;
+    /* background: #fff; */
     position: fixed;
     z-index: 9999999999;
 }
@@ -387,7 +388,8 @@ img.adp-marker {
     position: absolute;
     display: block;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
+    /* font-size: 12px; */
     white-space: pre;
     clear: right;
     font-weight: 400;
