@@ -19,7 +19,6 @@
                             <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#mob_panel_kategori" href="#mob_panel_kategori_list"> 
                                 <h5>
                                     <strong><i class="fa fa-globe"></i>&nbsp;&nbsp;Wisata Kebumen</strong>
-                                    <!--<strong><i class="fa fa-globe"></i>&nbsp;&nbsp;Objek</strong>--> 
                                     <span class="jml_objek_master">
                                         <button type="button" class="btn white btn-block btn-xs" id="jml_all_objek"></button>
                                     </span>
@@ -33,7 +32,6 @@
                                 <div class="input-icon">
                                     <i class="fa fa-search"></i>
                                     <input type="text" class="form-control" id="keyword_objek_mobile" placeholder="Temukan lokasi lainnya!">
-                                    <!--<input type="text" class="form-control" id="keyword_objek_mobile" placeholder="Pencarian ...">-->
                                 </div>
                             </div>
                         </div>
@@ -179,7 +177,7 @@
                             show_akomodasi = true;
                             // var str_akomodasi   = '<h5 class="akomodasi_label_cari"><hr/><strong>Akomodasi</strong></h5>';
                             // $('#acc_list_objek').append(str_akomodasi);
-                            var str_akomodasi_link  =   '<strong>Akomodasi</strong>' +
+                            var str_akomodasi_link  =   '<strong>Akomodasi Wisata</strong>' +
                                                         '<span class="jml_objek" style="margin-top: 0px;">' +
                                                             // '<div class="btn-group btn-group-xs btn-group-justified">' +
                                                                 // '<button type="button" class="btn white">' + x.jml_data + '</button>' +
@@ -197,19 +195,23 @@
                                                     '</div>';
                             $('#acc_list_objek').append(str_akomodasi);
 
-                            group_show[x.jenis] = false; //default tidak tampil
+                            group_show[x.jenis] = false; //default tidak tampil marker
                         }
                         else if(x.jenis == 'objek' && show_objek == false)
                         {
                             show_objek = true;
                             // var str_akomodasi   = '<h5 class="akomodasi_label_cari"><hr/><strong>Akomodasi</strong></h5>';
                             // $('#acc_list_objek').append(str_akomodasi);
-                            var str_objek_link  =   '<strong>Objek Wisata</strong>' +
+                            var str_objek_link  =   '<strong>Daftar Kategori Lokasi Wisata</strong>' +
                                                         '<span class="jml_objek" style="margin-top: 0px;">' +
-                                                            // '<div class="btn-group btn-group-xs btn-group-justified">' +
-                                                                // '<button type="button" class="btn white">' + x.jml_data + '</button>' +
-                                                                '<button type="button" class="btn btn-info btn-xs btn-block" id="btn_hide_show" onclick="show_hide_jenis(\'' + x.jenis + '\')"><i class="fa fa-eye" style="margin: 0px;"></i></button>' +
-                                                            // '</div>' +
+                                                            //draft '<div class="btn-group btn-group-xs btn-group-justified">' +
+                                                                //draft '<button type="button" class="btn white">' + x.jml_data + '</button>' +
+                                                                
+                                                                //Buttons below have been intentional hidden, the actual function to hide all the markers of the main map.
+                                                                //'<button type="button" class="btn btn-info btn-xs btn-block" id="btn_hide_show" onclick="show_hide_jenis(\'' + x.jenis + '\')"><i class="fa fa-eye" style="margin: 0px;"></i></button>' +
+								//'<button type="button" class="btn btn-info btn-xs btn-block" id="btn_hide_show" onclick="show_hide_jenis(\'' + x.jenis + '\')"><i class="fa fa-eye" style="margin: 0px;"></i></button>' +
+
+                                                            //draft '</div>' +
                                                         '</span>';
 
                             var str_objek   = '<div class="panel panel-default" id="objek_header" style="margin-bottom: 10px;">' +
@@ -221,7 +223,7 @@
                                                     '</div>';
                             $('#acc_list_objek').append(str_objek);
 
-                            group_show[x.jenis] = true; //default tampil
+                            group_show[x.jenis] = true; //default tampil marker
                         }
 
                         /* Panel Template */
@@ -282,10 +284,12 @@
                             marker_index = (markers.length - 1);
                             
                             /* Marker Info */
-                            var info     = '<div class="text-center"><img src="' + y.foto + '" class="thumbnails" width="150px"><br/>';
-                            info    += '<strong>' + y.nama + '</strong></div><hr style="margin: 5px 0px;"/>';
-                            info    += '<button class="btn btn-block blue btn-sm" onclick="petunjukArah(' + marker_index + ')"><i class="fa fa-map-signs"></i> Petunjuk Arah</button>';
-                            info    += '<button class="btn btn-block blue btn-sm" onclick="informasiObjek(' + y.objek_id + ',' + marker_index + ')"><i class="fa fa-info"></i> Informasi Objek</button>';
+                            var info     = '<div class="text-center"><!--<img src="' + y.foto + '" class="thumbnails" width="150px">--><br/>';
+                            info    += '<strong>' + y.nama + '</strong></div><br/><!--<hr style="margin: 5px 0px;"/>-->';
+                            info    += '<div class="btn-group btn-group-sm">';
+                            info    += '<button type="button" class="btn btn-info btn-sm" onclick="informasiObjek(' + y.objek_id + ',' + marker_index + ')"><i class="fa fa-info-circle"></i> Info</button>';
+                            info    += '<button type="button" class="btn btn-success btn-sm" onclick="petunjukArah(' + marker_index + ')"><i class="fa fa-compass"></i> Rute</button>';
+                            info    += '</div>';
                             /* End Of Marker Info */
 
                             markers_info.push(info);
