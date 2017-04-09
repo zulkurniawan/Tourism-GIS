@@ -64,19 +64,20 @@
                 <div class="hidden-lg hidden-md" style="margin-top: 5px; display: none;" id="tombol_info_mobile">
                     <div class="btn-group btn-group-justified">
                         <a href="#modal-info-kontributor" class="btn btn-sm" role="button" data-toggle="modal">
-                            <i class="fa fa-user"></i>&nbsp;&nbsp;Kontributor 
+                            <i class="fa fa-users"></i>&nbsp;&nbsp;Kontributor 
                         </a>
-                        <a href="https://tees.co.id/stores/kebu.men/" class="btn btn-sm" target="_blank"> 
-                        <!--<a href="http://lewatlawet.com/" class="btn btn-sm" target="_blank">--> 
-                            <i class="fa fa-gift"></i>&nbsp;&nbsp;Merchandise 
+                        <a href="#modal-info-tentang" class="btn btn-sm" role="button" data-toggle="modal">
+                            <i class="fa fa-info-circle"></i>&nbsp;&nbsp;Info Aplikasi 
                         </a>
+                        
                     </div>        
                     <div class="btn-group btn-group-justified">
-                        <a href="#modal-info-tentang" class="btn btn-sm" role="button" data-toggle="modal">
-                            <i class="fa fa-building"></i>&nbsp;&nbsp;Tentang 
+                        <a href="https://tees.co.id/stores/kebu.men/" class="btn btn-sm" target="_blank"> 
+                        <!--<a href="http://lewatlawet.com/" class="btn btn-sm" target="_blank">--> 
+                            <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Merchandise 
                         </a>
                         <a href="#modal-info-hubungi" class="btn btn-sm" role="button" data-toggle="modal">
-                            <i class="fa fa-phone"></i>&nbsp;&nbsp;Hubungi 
+                            <i class="fa fa-whatsapp"></i>&nbsp;&nbsp;Hubungi Kami
                         </a>
                     </div>        
                 </div>
@@ -202,7 +203,7 @@
                             show_objek = true;
                             // var str_akomodasi   = '<h5 class="akomodasi_label_cari"><hr/><strong>Akomodasi</strong></h5>';
                             // $('#acc_list_objek').append(str_akomodasi);
-                            var str_objek_link  =   '<strong>Daftar Kategori Lokasi Wisata</strong>' +
+                            var str_objek_link  =   '<strong>Daftar kategori lokasi wisata</strong>' +
                                                         '<span class="jml_objek" style="margin-top: 0px;">' +
                                                             //draft '<div class="btn-group btn-group-xs btn-group-justified">' +
                                                                 //draft '<button type="button" class="btn white">' + x.jml_data + '</button>' +
@@ -284,11 +285,12 @@
                             marker_index = (markers.length - 1);
                             
                             /* Marker Info */
-                            var info     = '<div class="text-center"><!--<img src="' + y.foto + '" class="thumbnails" width="150px">--><br/>';
+                            var 
+                            info     = '<div class="text-center"><!--<img src="' + y.foto + '" class="thumbnails" width="150px">--><br/>';
                             info    += '<strong>' + y.nama + '</strong></div><br/><!--<hr style="margin: 5px 0px;"/>-->';
                             info    += '<div class="btn-group btn-group-sm">';
                             info    += '<button type="button" class="btn btn-info btn-sm" onclick="informasiObjek(' + y.objek_id + ',' + marker_index + ')"><i class="fa fa-info-circle"></i> Info</button>';
-                            info    += '<button type="button" class="btn btn-success btn-sm" onclick="petunjukArah(' + marker_index + ')"><i class="fa fa-compass"></i> Rute</button>';
+                            info    += '<button type="button" class="btn btn-success btn-sm" onclick="petunjukArah(' + marker_index + ')"><i class="fa fa-arrow-right"></i> Rute</button>';
                             info    += '</div>';
                             /* End Of Marker Info */
 
