@@ -5,7 +5,8 @@
                 <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0 0 25px;">
                     <div class="input-icon">
                         <input type="text" class="form-control" id="keyword_objek">
-                        <label>Pencarian</label>
+                        <label>Temukan lokasi lainnya!</label>
+                        <!--<label>Pencarian</label>-->
                         <i class="fa fa-search"></i>
                         <span class="help-block">Tekan "Enter" untuk mulai pencarian</span>
                     </div>
@@ -17,7 +18,8 @@
                         <h4 class="panel-title">
                             <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#mob_panel_kategori" href="#mob_panel_kategori_list"> 
                                 <h5>
-                                    <strong><i class="fa fa-bars"></i>&nbsp;&nbsp;Objek</strong> 
+                                    <strong><i class="fa fa-globe"></i>&nbsp;&nbsp;Wisata Kebumen</strong>
+                                    <!--<strong><i class="fa fa-globe"></i>&nbsp;&nbsp;Objek</strong>--> 
                                     <span class="jml_objek_master">
                                         <button type="button" class="btn white btn-block btn-xs" id="jml_all_objek"></button>
                                     </span>
@@ -30,7 +32,8 @@
                             <div class="form-group" style="margin-bottom: 5px;">
                                 <div class="input-icon">
                                     <i class="fa fa-search"></i>
-                                    <input type="text" class="form-control" id="keyword_objek_mobile" placeholder="Pencarian ...">
+                                    <input type="text" class="form-control" id="keyword_objek_mobile" placeholder="Temukan lokasi lainnya!">
+                                    <!--<input type="text" class="form-control" id="keyword_objek_mobile" placeholder="Pencarian ...">-->
                                 </div>
                             </div>
                         </div>
@@ -65,7 +68,8 @@
                         <a href="#modal-info-kontributor" class="btn btn-sm" role="button" data-toggle="modal">
                             <i class="fa fa-user"></i>&nbsp;&nbsp;Kontributor 
                         </a>
-                        <a href="http://lewatlawet.com/" class="btn btn-sm" target="_blank"> 
+                        <a href="https://tees.co.id/stores/kebu.men/" class="btn btn-sm" target="_blank"> 
+                        <!--<a href="http://lewatlawet.com/" class="btn btn-sm" target="_blank">--> 
                             <i class="fa fa-gift"></i>&nbsp;&nbsp;Merchandise 
                         </a>
                     </div>        
