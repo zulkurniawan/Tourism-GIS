@@ -23,6 +23,8 @@
         <link href="<?=base_url()?>/assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
         <link href="<?=base_url()?>/assets/custom_style.css" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" href="favicon.ico" /> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
 
 
         <script src="<?=base_url()?>/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
@@ -33,12 +35,27 @@
         <script src="<?=base_url()?>/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
         <script src="<?=base_url()?>/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
         <script src="<?=base_url()?>/assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <script src="<?=base_url()?>/assets/jquery.lazyload.min.js" type="text/javascript"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script>
+          new WOW().init();
+        </script>
+
+        <!-- <script src="<?=base_url()?>/assets/jquery.lazyload.min.js" type="text/javascript"></script> -->
         <script src="<?=base_url()?>/assets/layouts/layout4/scripts/layout.min.js" type="text/javascript"></script>
         <script src="<?=base_url()?>/assets/clipboard.js/dist/clipboard.js" type="text/javascript"></script>
         <!-- <script src="<?=base_url()?>/assets/pages/scripts/ui-blockui.min.js" type="text/javascript"></script> -->
         <!-- <script src="<?=base_url()?>/assets/layouts/layout4/scripts/demo.min.js" type="text/javascript"></script> -->
         <!-- <script src="<?=base_url()?>/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script> -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=<?=$this->config->item('map_api')?>&language=id"></script>        
+        <script src="https://maps.googleapis.com/maps/api/js?key=<?=$this->config->item('map_api')?>&language=id"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.min.js"></script>         -->
+
+        <!-- Custom -->
+        <script src="<?=base_url()?>/assets/global/scripts/custom.js" type="text/javascript"></script>
+
     </head>
 
     <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md page-footer-fixed">
@@ -285,6 +302,27 @@
                             $('#preloader').delay(350).fadeOut('slow');
                 $('html').removeClass('is-loading');
             });
+
+            $(document).ready(function() {
+
+            });
+        </script>
+
+        <script>
+
+            function lazyLoad(){
+                var $images = $('.lazy_load');
+
+                $images.each(function(){
+                    var $img = $(this),
+                        src = $img.attr('data-src');
+
+                    $img
+                        .on('load',imgLoaded($img[0]))
+                        .attr('src',src);
+                    });
+                };
+
         </script>
         
        

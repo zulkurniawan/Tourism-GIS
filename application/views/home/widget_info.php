@@ -42,9 +42,9 @@
             <div class="modal-body" style="height: 350px; overflow-y: auto;">
                 <?php if($kontributor->status == '200'){ ?>
                     <?php foreach($kontributor->data as $key => $c): ?>
-                        <div class="row">
+                        <div class="row wow fadeIn">
                             <div class="col-md-4 text-center" style="margin-bottom: 1px;">
-                                <img src="<?=$c->foto?>" class="thumbnails" width="60%"><br/>
+                                <img src="<?=$c->foto?>" class="lazy thumbnails" width="60%"><br/>
                             </div>
                             <div class="col-md-8">
                                 <ul class="list-group" style="margin-bottom: 0px;">

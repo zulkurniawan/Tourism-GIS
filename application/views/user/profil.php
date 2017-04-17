@@ -39,61 +39,93 @@
             </div>
         </div>
         -->
-    	<div class="col-md-6 col-md-offset-3">
-    		<div class="portlet light" >
-                <div class="portlet-title">
-                    <a data-toggle="modal" href="#bagikan_halaman" class="btn btn-sm btn-info pull-right">
-                        <i class="fa fa-share"></i><span class="hidden-xs hidden-sm"> Bagikan Halaman</span>
-                    </a>
-                    <a href="<?=site_url()?>" class="btn btn-sm grey pull-right" style="margin-right: 5px;">
-                        <i class="fa fa-home"></i><span class="hidden-xs hidden-sm"> Beranda</span>
-                    </a>
-                </div>
+    	<div class="col-md-12">
+            <a href="<?=site_url()?>" class="btn btn-sm grey" style="margin-right: 5px;margin-bottom: 10px;margin-top: 20px;">
+                <i class="fa fa-home"></i><span class="hidden-xs hidden-sm"> Beranda</span>
+            </a>
+            <div class="portlet light card-new">
                 <div class="portlet-body form">
-                    <center>
-                        <img src="<?=load_foto_user($data->foto)?>" width="60%" class="thumbnails"><br/>
-                    </center>
-                    <hr/>
-                    <form>
-                        <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
-                            <div class="form-control form-control-static">
-                                <?=$data->nama?>
+                    <div class="row--flex">
+                        <div class="col-md-6 no-padding">
+                            <div class="crop">
+                                <img src="<?=load_foto_user($data->foto)?>" width="60%" class="thumbnails">
                             </div>
-                            <label>Nama</label>
                         </div>
-                        
-                        <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
-                            <div class="form-control form-control-static">
-                        	<?=date('d-m-Y H:i:s', strtotime($data->terakhir_login))?>
-                            </div>
-                            <label>Terakhir Login</label>
+                        <div class="col-md-6">
+                                <form>
+                                    <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
+                                        <div class="form-control form-control-static">
+                                            <h3 style="margin-top: 0;"><?=$data->nama?></h3>
+                                        </div>
+                                        <label>Nama</label>
+                                    </div>
+                                    
+                                    <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
+                                        <div class="form-control form-control-static verifikasi-label">
+                                            <?=label_user_verified($data, '-', $data->waktu_post_kode)?>
+                                        </div>
+                                        <label>Status Verifikasi</label>
+                                    </div>
+                                  
+                                    <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
+                                        <div class="form-control form-control-static"><?=empty($data->organisasi) ? ' - ' : $data->organisasi?></div>
+                                        <label><?=$data->level == 'Kontributor' ? 'Organisasi / Komunitas' : ($data->level == 'Partners' ? 'Nama Bisnis' : 'Organisasi / Komunitas')?></label>
+                                    </div>
+                                    <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
+                                        <div class="form-control form-control-static"><?=empty($data->alamat) ? ' - ' : $data->alamat?></div>
+                                        <label><?=$data->level == 'Kontributor' ? 'Alamat' : ($data->level == 'Partners' ? 'Alamat Usaha' : 'Alamat')?></label>
+                                    </div>
+
+                                    <div class="form-group last-login form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
+                                        <div class="form-control form-control-static">
+                                        <?=date('d-m-Y H:i:s', strtotime($data->terakhir_login))?>
+                                        </div>
+                                        <label>Terakhir Login</label>
+                                    </div>
+
+                                      <?php if(!empty($data->tentang)){ ?>
+                                        <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
+                                            <div class="form-control form-control-static">
+                                                <?=$data->tentang?>
+                                            </div>
+                                            <label>Tentang</label>
+                                        </div>
+
+                                    <?php } ?>
+                                    <hr>
+
+                                     <a data-toggle="modal" href="#bagikan_halaman" class="btn btn-sm btn-info">
+                                        <i class="fa fa-share"></i><span class="hidden-xs hidden-sm"> Bagikan Halaman</span>
+                                    </a>
+                                    
+                                </form>
                         </div>
-                        <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
-                            <div class="form-control form-control-static">
-                                <?=label_user_verified($data, '-', $data->waktu_post_kode)?>
-                            </div>
-                            <label>Status Verifikasi</label>
-                        </div>
-                        <?php if(!empty($data->tentang)){ ?>
-                            <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
-                                <div class="form-control form-control-static">
-                                    <?=$data->tentang?>
-                                </div>
-                                <label>Tentang</label>
-                            </div>
-                            <hr/>
-                        <?php } ?>
-                        <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
-                            <div class="form-control form-control-static"><?=empty($data->organisasi) ? ' - ' : $data->organisasi?></div>
-                            <label><?=$data->level == 'Kontributor' ? 'Organisasi / Komunitas' : ($data->level == 'Partners' ? 'Nama Bisnis' : 'Organisasi / Komunitas')?></label>
-                        </div>
-                        <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
-                            <div class="form-control form-control-static"><?=empty($data->alamat) ? ' - ' : $data->alamat?></div>
-                            <label><?=$data->level == 'Kontributor' ? 'Alamat' : ($data->level == 'Partners' ? 'Alamat Usaha' : 'Alamat')?></label>
-                        </div>
-                        
-                    </form>
+                    </div>
+                    <!-- <hr/> -->
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+        <h2 class="header-new">Kontributor Lainnya</h2>
+            <div class="owl-carousel owl-theme show-kontributor">
+                    <?php if($kontributor->status == '200'){ ?>
+                        <?php foreach($kontributor->data as $key => $c): ?>
+                            <div class="item item__kontributor">
+                                <a class="link-wrapper" href="<?=$c->profil?>">
+                                    <div class="wrapper">
+                                        <div class="image">
+                                            <img src="<?=$c->foto?>" class="thumbnails" width="60%">
+                                        </div>    
+                                    </div>
+                                    <h4 class="name__item"><?=$c-> nama?></h4>
+                                </a>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php } else { ?>
+                        <?=war_msg('Data Kontributor sedang diperbarui')?>
+                    <?php } ?>
             </div>
         </div>
     </div>
