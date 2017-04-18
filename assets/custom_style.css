@@ -488,7 +488,7 @@ img.adp-marker {
 }
 
 .portlet.light {
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .portlet_objek_wisata {
@@ -690,5 +690,5 @@ body.page-md {
 }
 
 .profil-card img {
-    border-radius: 35px;
+    border-radius: 10px;
 }
