@@ -23,8 +23,12 @@
         <link href="<?=base_url()?>/assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
         <link href="<?=base_url()?>/assets/custom_style.css" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" href="favicon.ico" /> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
+        
+        <link rel="stylesheet" href="<?=base_url()?>/assets/new/animate.css" />
+        <link rel="stylesheet" href="<?=base_url()?>/assets/new/owlcarousel/owl.carousel.min.css" />
+        
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" /> -->
 
 
         <script src="<?=base_url()?>/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
@@ -37,8 +41,11 @@
         <script src="<?=base_url()?>/assets/global/scripts/app.min.js" type="text/javascript"></script>
         <script src="<?=base_url()?>/assets/jquery.lazyload.min.js" type="text/javascript"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="<?=base_url()?>/assets/new/owlcarousel/owl.carousel.min.js"></script>
+        <script src="<?=base_url()?>/assets/new/wow.min.js"></script>
+        
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>-->
         <script>
           new WOW().init();
         </script>
