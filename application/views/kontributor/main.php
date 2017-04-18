@@ -7,7 +7,7 @@
 			    		<i class="fa fa-home"></i> Beranda
 			    	</a>
 			    	<a data-toggle="modal" href="#bagikan_halaman" class="btn btn-sm btn-info pull-right">
-			    		<i class="fa fa-share-alt"></i> Bagikan Halaman
+			    		<i class="fa fa-share-alt"></i> Bagikan
 			    	</a>
 					<hr/>
 			        <div class="caption" style="margin-bottom: 20px;">
@@ -23,23 +23,29 @@
 			                        <div class="row portlet light profil-card wow fadeInUp">
 			                            <div class="col-md-4 text-center" style="margin-bottom: 10px;">
 			                                <?php if(!empty($c->foto)){ ?>
-			                                    <img src="<?php echo $c->foto ?>" class="thumbnails" width="60%">
+			                                    <img src="<?php echo $c->foto ?>" class="thumbnails" width="50%">
 			                                <?php } else { ?>
 			                                    <img src="<?=base_url('assets/user.png')?>" width="60%" class="thumbnails">
 			                                <?php } ?>
-			                                <br/><?=label_user_verified($c, 'margin: 10px 15%; width:70%; float: left;')?>
+			                                <!--<br/><?=label_user_verified($c, 'margin: 10px 15%; width:70%; float: left;')?>-->
 			                            </div>
 			                            <div class="col-md-8">
 			                                <ul class="list-group" style="margin-bottom: 0px;">
 			                                    <li class="list-group-item">
 			                                    Nama <span style="float:right; font-weight: bold"><?=$c->nama?></span></li>
-			                                    <li class="list-group-item">Alamat <br/><span style="float:right; font-weight: bold"><?=$c->alamat?></span></li>
-			                                    <li class="list-group-item">Organisasi <span style="float:right; font-weight: bold"><?=$c->organisasi?></span></li>
+			                                    <!--<li class="list-group-item">Alamat <br/><span style="float:right; font-weight: bold"><?=$c->alamat?></span></li>-->
+			                                    <li class="list-group-item">Identitas<?=label_user_verified($c, 'float: right;')?></li>
+			                                    <li class="list-group-item">
+                                        			<a href="<?=$c->profil?>" class="btn btn-block btn-success btn-xs">
+                                           		 	   <i class="fa fa-user"></i>&nbsp;&nbsp;Lihat profil
+                                        			</a>
+                                    			    </li>
+			                                    <!--<li class="list-group-item">Organisasi <span style="float:right; font-weight: bold"><?=$c->organisasi?></span></li>
 			                                    <?php if(!empty($c->tentang)){ ?>
 			                                        <li class="list-group-item hidden-lg hidden-md">
 			                                            <?=$c->tentang?>
 			                                        </li>
-			                                    <?php } ?>
+			                                    <?php } ?>-->
 			                                </ul>
 			                            </div>
 			                        </div>
