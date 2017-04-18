@@ -23,7 +23,7 @@
 			                        <div class="row portlet light profil-card wow fadeInUp">
 			                            <div class="col-md-4 text-center" style="margin-bottom: 10px;">
 			                                <?php if(!empty($c->foto)){ ?>
-			                                    <img src="<?php echo $c->foto ?>" class="thumbnails" width="50%">
+			                                    <img src="<?php echo $c->foto ?>" class="thumbnails" width="80%">
 			                                <?php } else { ?>
 			                                    <img src="<?=base_url('assets/user.png')?>" width="60%" class="thumbnails">
 			                                <?php } ?>
