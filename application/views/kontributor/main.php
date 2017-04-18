@@ -6,7 +6,7 @@
 		    		<i class="fa fa-home"></i> Beranda
 		    	</a>
 		    	<a data-toggle="modal" href="#bagikan_halaman" class="btn btn-sm btn-info pull-right">
-		    		<i class="fa fa-share"></i> Bagikan Halaman
+		    		<i class="fa fa-share-alt"></i> Bagikan Halaman
 		    	</a>
 				<hr/>
 		        <div class="caption">
@@ -42,18 +42,18 @@
 		                                </ul>
 		                            </div>
 		                        </div>
-		                        <?php if(!empty($c->tentang)){ ?>
+		                        <!--<?php if(!empty($c->tentang)){ ?>
 		                            <div class="row hidden-xs hidden-sm">
 		                                <div class="col-md-12">
 		                                    <h4>Tentang</h4>
 		                                    <p style="margin: 0px;"><?=$c->tentang?></p>
 		                                </div>
 		                            </div>
-		                        <?php } ?>
+		                        <?php } ?>-->
 		                        <hr/>
 		                    <?php endforeach; ?>
 		                <?php } else { ?>
-		                    <?=war_msg('Data Kontributor tidak ada')?>
+		                    <?=war_msg('Data kontributor sedang diperbaharui.')?>
 		                <?php } ?>		    		
 		    		</div>
 		    	</div>
