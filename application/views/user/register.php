@@ -10,21 +10,21 @@
 			    </div>
 			    <div class="portlet-body" style="max-height: 742px; overflow-y: scroll;">
 			    	<div class="text_perjanjian_kontributor">
-			    		<h3 class="text-center" style="margin-top: 0px;">Kontributor Pariwisata</h3><!--<hr style="margin-top: 15px;" />-->
-
+			    		<h3 class="text-center" style="margin-top: 0px;">Kontributor Pariwisata</h3>
+			    		<!--<hr style="margin-top: 15px;" />
 					    <div class="form-group form-md-line-input">
 					     	<div class="modal-footer">
-                                <a href="<?=site_url('API/auth/login_with_google')?>" class="btn btn-danger btn-block">
-                                    <i class="fa fa-google-plus"></i> Daftar dengan Google+
-                                </a>
+                                	      <a href="<?=site_url('API/auth/login_with_google')?>" class="btn btn-danger btn-block">
+                                    		<i class="fa fa-google-plus"></i> Daftar dengan Google+
+                                	      </a>
                                		      <a href="<?=site_url('API/auth/login_with_fb')?>" class="btn btn-primary btn-block">
                               		      	<i class="fa fa-facebook"></i> Daftar dengan Facebook
                      			      </a>
                   		              <a href="<?=site_url('API/auth/login_with_ig')?>" class="btn purple-studio btn-block">
                  		              	<i class="fa fa-instagram"></i> Daftar dengan Instagram
                            		      </a>
-                            		     </div>
-					    </div>
+                            		     	</div>
+					    </div>-->
 
 				    	<?=$this->config->item('registrasi_perjanjian')?>
 				    </div>
@@ -69,7 +69,7 @@
                                     				<option value="Partners" <?=@$data->regas == 'Partners' ? 'selected="selected"' : ''?>>Partners Akomodasi</option>
                                 			</select>					        
 								<div class="form-control-focus"> </div>
-								<span class="help-block">Silahkan pelajari Syarat & Ketentuan.</span>
+								<span class="help-block">Silahkan baca syarat & ketentuan.</span>
 					        </div><br>
 					    </div>
 					    <div class="col-md-7">
@@ -168,7 +168,7 @@
 		    	<div class="text_perjanjian_kontributor">
 		    		<h3 class="text-center" style="margin-top: 0px; margin-bottom: 0px;">Kontributor Pariwisata</h3><!--<hr style="margin-top: 10px;" />-->
 			    	
-					    <div class="form-group form-md-line-input">
+					    <!--<div class="form-group form-md-line-input">
 					     <div class="modal-footer">
                                		      <a href="<?=site_url('API/auth/login_with_fb')?>" class="btn btn-primary btn-block">
                               		      	<i class="fa fa-facebook"></i> Daftar dengan Facebook
@@ -177,7 +177,7 @@
                  		              	<i class="fa fa-instagram"></i> Daftar dengan Instagram
                            		      </a>
                             		     </div>
-					    </div>
+					    </div>-->
 			    	
 			    	<?=$this->config->item('registrasi_perjanjian')?>
 			    </div>
