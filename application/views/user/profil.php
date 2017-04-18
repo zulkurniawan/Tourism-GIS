@@ -62,7 +62,8 @@
                                     
                                     <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
                                         <div class="form-control form-control-static verifikasi-label">
-                                            <?=label_user_verified($data, '-', $data->waktu_post_kode)?>
+                                            <?=label_user_verified($data)?>
+                                            <!--<?=label_user_verified($data, '-', $data->waktu_post_kode)?>-->
                                         </div>
                                         <label>Status Verifikasi</label>
                                     </div>
@@ -106,9 +107,9 @@
             </div>
         </div>
     </div>
-    <div class="row">
+<!--<div class="row">
         <div class="col-md-12">
-        <h2 class="header-new">Kontributor Lainnya</h2>
+          <h2 class="header-new">Kontributor Lainnya</h2>
             <div class="owl-carousel owl-theme show-kontributor">
                     <?php if($kontributor->status == '200'){ ?>
                         <?php foreach($kontributor->data as $key => $c): ?>
@@ -128,5 +129,5 @@
                     <?php } ?>
             </div>
         </div>
-    </div>
+    </div>-->
 </div>
