@@ -2,7 +2,8 @@
 <div class="portlet light widget_info portlet_objek_wisata hidden-xs hidden-sm" style="padding: 5px 5px 3px !important">
     <div class="portlet-body">
         <div class="btn-group btn-group-justified">
-            <a href="#modal-info-kontributor" class="btn btn-sm" role="button" data-toggle="modal">
+            <a href="<?=site_url('kontributor')?>" class="btn btn-sm" role="button" data-toggle="modal">
+            <!--<a href="#modal-info-kontributor" class="btn btn-sm" role="button" data-toggle="modal">-->
                 <i class="fa fa-users"></i>&nbsp;&nbsp;Kontributor 
             </a>
             <a href="#modal-info-tentang" class="btn btn-sm" role="button" data-toggle="modal">
@@ -10,8 +11,8 @@
             </a>
         </div>        
         <div class="btn-group btn-group-justified">
-            <a href="https://tees.co.id/stores/kebu.men/" class="btn btn-sm" target="_blank"> 
-            <!--<a href="http://lewatlawet.com/" class="btn btn-sm" target="_blank">--> 
+            <!--<a href="https://tees.co.id/stores/kebu.men/" class="btn btn-sm" target="_blank">--> 
+            <a href="http://lewatlawet.com/" class="btn btn-sm" target="_blank"> 
                 <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Merchandise 
             </a>
             <a href="#modal-info-hubungi" class="btn btn-sm" role="button" data-toggle="modal">
