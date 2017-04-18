@@ -34,7 +34,7 @@
 			                                    <li class="list-group-item">
 			                                    Nama <span style="float:right; font-weight: bold"><?=$c->nama?></span></li>
 			                                    <!--<li class="list-group-item">Alamat <br/><span style="float:right; font-weight: bold"><?=$c->alamat?></span></li>-->
-			                                    <li class="list-group-item">Identitas<?=label_user_verified($c, 'float: right;')?></li>
+			                                    <li class="list-group-item">Identitas <?=label_user_verified($c, 'float: right;')?></li>
 			                                    <li class="list-group-item">
                                         			<a href="<?=$c->profil?>" class="btn btn-block btn-success btn-xs">
                                            		 	   <i class="fa fa-user"></i>&nbsp;&nbsp;Lihat profil
