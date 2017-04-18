@@ -43,12 +43,17 @@
             <a href="<?=site_url()?>" class="btn btn-sm grey" style="margin-right: 5px;margin-bottom: 10px;margin-top: 20px;">
                 <i class="fa fa-home"></i><span class="hidden-xs hidden-sm"> Beranda</span>
             </a>
+            
+            <a data-toggle="modal" href="#bagikan_halaman" class="btn btn-sm btn-info" style="margin-left: 5px;margin-bottom: 10px;margin-top: 20px;">
+                <i class="fa fa-share-alt"></i><span class="hidden-xs hidden-sm"> Bagikan Profil</span>
+            </a>
+            
             <div class="portlet light card-new">
                 <div class="portlet-body form">
                     <div class="row--flex">
                         <div class="col-md-6 no-padding">
                             <div class="crop">
-                                <img src="<?=load_foto_user($data->foto)?>" width="60%" class="thumbnails">
+                                <img src="<?=load_foto_user($data->foto)?>" width="40%" class="thumbnails">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -65,7 +70,7 @@
                                             <?=label_user_verified($data)?>
                                             <!--<?=label_user_verified($data, '-', $data->waktu_post_kode)?>-->
                                         </div>
-                                        <label>Status Verifikasi</label>
+                                        <label>Identitas</label>
                                     </div>
                                   
                                     <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
@@ -83,7 +88,6 @@
                                         </div>
                                         <label>Terakhir Login</label>
                                     </div>
-
                                       <?php if(!empty($data->tentang)){ ?>
                                         <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0px 0px 15px;">
                                             <div class="form-control form-control-static">
@@ -91,14 +95,12 @@
                                             </div>
                                             <label>Tentang</label>
                                         </div>
-
-                                    <?php } ?>
-                                    <hr>
-
+                                      <?php } ?>
+                                    <!--<hr>
                                      <a data-toggle="modal" href="#bagikan_halaman" class="btn btn-sm btn-info">
-                                        <i class="fa fa-share"></i><span class="hidden-xs hidden-sm"> Bagikan Halaman</span>
-                                    </a>
-                                    
+                                        <i class="fa fa-share"></i><span class="hidden-xs hidden-sm"> Bagikan Profil</span>
+                                    </a>-->
+                                   
                                 </form>
                         </div>
                     </div>
