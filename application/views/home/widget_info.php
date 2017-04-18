@@ -1,3 +1,4 @@
+<!--desktop view-->
 <div class="portlet light widget_info portlet_objek_wisata hidden-xs hidden-sm" style="padding: 5px 5px 3px !important">
     <div class="portlet-body">
         <div class="btn-group btn-group-justified">
@@ -43,9 +44,9 @@
                 <?php if($kontributor->status == '200'){ ?>
                     <?php foreach($kontributor->data as $key => $c): ?>
                         <div class="row wow fadeIn">
-                            <div class="col-md-4 text-center" style="margin-bottom: 1px;">
+                            <!--<div class="col-md-4 text-center" style="margin-bottom: 1px;">
                                 <img src="<?=$c->foto?>" class="lazy thumbnails" width="60%"><br/>
-                            </div>
+                            </div>-->
                             <div class="col-md-8">
                                 <ul class="list-group" style="margin-bottom: 0px;">
                                     <li class="list-group-item">

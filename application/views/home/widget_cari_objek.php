@@ -1,3 +1,4 @@
+<!--mobile view-->
 <div id="w-cari-objek" class="w-home">
     <div class="portlet light portlet_objek_wisata">
         <div class="portlet-body form">        
