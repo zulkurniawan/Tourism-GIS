@@ -23,6 +23,12 @@
         <link href="<?=base_url()?>/assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
         <link href="<?=base_url()?>/assets/custom_style.css" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" href="favicon.ico" /> 
+        
+        <link rel="stylesheet" href="<?=base_url()?>/assets/new/animate.css" />
+        <link rel="stylesheet" href="<?=base_url()?>/assets/new/owlcarousel/owl.carousel.min.css" />
+        
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" /> -->
 
 
         <script src="<?=base_url()?>/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
@@ -33,12 +39,30 @@
         <script src="<?=base_url()?>/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
         <script src="<?=base_url()?>/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
         <script src="<?=base_url()?>/assets/global/scripts/app.min.js" type="text/javascript"></script>
+        <script src="<?=base_url()?>/assets/jquery.lazyload.min.js" type="text/javascript"></script>
+        
+        <script src="<?=base_url()?>/assets/new/owlcarousel/owl.carousel.min.js"></script>
+        <script src="<?=base_url()?>/assets/new/wow.min.js"></script>
+        
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>-->
+        <script>
+          new WOW().init();
+        </script>
+
+        <!-- <script src="<?=base_url()?>/assets/jquery.lazyload.min.js" type="text/javascript"></script> -->
         <script src="<?=base_url()?>/assets/layouts/layout4/scripts/layout.min.js" type="text/javascript"></script>
         <script src="<?=base_url()?>/assets/clipboard.js/dist/clipboard.js" type="text/javascript"></script>
         <!-- <script src="<?=base_url()?>/assets/pages/scripts/ui-blockui.min.js" type="text/javascript"></script> -->
         <!-- <script src="<?=base_url()?>/assets/layouts/layout4/scripts/demo.min.js" type="text/javascript"></script> -->
         <!-- <script src="<?=base_url()?>/assets/layouts/global/scripts/quick-sidebar.min.js" type="text/javascript"></script> -->
-        <script src="https://maps.googleapis.com/maps/api/js?key=<?=$this->config->item('map_api')?>&language=id"></script>        
+        <script src="https://maps.googleapis.com/maps/api/js?key=<?=$this->config->item('map_api')?>&language=id"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/unveil/1.3.0/jquery.unveil.min.js"></script>         -->
+
+        <!-- Custom -->
+        <script src="<?=base_url()?>/assets/global/scripts/custom.js" type="text/javascript"></script>
+
     </head>
 
     <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md page-footer-fixed">
@@ -102,8 +126,8 @@
                                 <div class="form-body">
                                     <div class="form-group form-md-line-input form-md-floating-label">
                                         <input type="text" class="form-control" name="email">
-                                        <label>Email / No Handphone</label>
-                                        <!-- <span class="help-block">Some help goes here...</span> -->
+                                        <label>Email / No Hp</label>
+                                        <span class="help-block">Gunakan no hp jika sudah terverifikasi</span>
                                     </div>
                                     <div class="form-group form-md-line-input form-md-floating-label">
                                         <input type="password" class="form-control" name="password">
@@ -116,7 +140,7 @@
                                                 <label for="checkbox1111">
                                                     <span></span>
                                                     <span class="check"></span>
-                                                    <span class="box"></span> Ingat Saya
+                                                    <span class="box"></span> Simpan login
                                                 </label>
                                             </div>
                                         </div>
@@ -125,24 +149,24 @@
                                 <div id="form-login-result"></div>
                                 <div class="form-actions text-right">
                                     <button type="submit" class="btn blue">
-                                        <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;Submit
+                                        <i class="fa fa-check"></i>&nbsp;&nbsp;&nbsp;Login
                                     </button>
                                     <button type="button" class="btn gray" data-dismiss="modal">
                                         <i class="fa fa-times"></i>&nbsp;&nbsp;&nbsp;Batal
                                     </button>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <!--<div class="modal-footer">
                                 <a href="<?=site_url('API/auth/login_with_google')?>" class="btn btn-danger btn-block">
-                                    <i class="fa fa-google-plus"></i> Login dengan Google+
+                                    <i class="fa fa-google-plus"></i> dengan Google+
                                 </a>
                                 <a href="<?=site_url('API/auth/login_with_fb')?>" class="btn btn-primary btn-block">
-                                    <i class="fa fa-facebook"></i> Login dengan Facebook
+                                    <i class="fa fa-facebook"></i> dengan Facebook
                                 </a>
                                 <a href="<?=site_url('API/auth/login_with_ig')?>" class="btn purple-studio btn-block">
-                                    <i class="fa fa-instagram"></i> Login dengan Instagram
+                                    <i class="fa fa-instagram"></i> dengan Instagram
                                 </a>
-                            </div>
+                            </div>-->
                         </form>
                     </div>
                 </div>
@@ -222,7 +246,7 @@
                         </div>
                         <h4 class="modal-title">
                             <span class="hidden-xs hidden-sm">
-                                <i class="fa fa-share"></i>&nbsp;&nbsp;Bagikan Halaman
+                                <i class="fa fa-share-alt"></i>&nbsp;&nbsp;Bagikan Halaman
                             </span>&nbsp;
                         </h4>
                     </div>
@@ -286,7 +310,7 @@
                 $('html').removeClass('is-loading');
             });
         </script>
-        
+
        
         
     </body>

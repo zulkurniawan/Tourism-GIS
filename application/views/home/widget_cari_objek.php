@@ -1,3 +1,4 @@
+<!--mobile view-->
 <div id="w-cari-objek" class="w-home">
     <div class="portlet light portlet_objek_wisata">
         <div class="portlet-body form">        
@@ -5,7 +6,8 @@
                 <div class="form-group form-md-line-input form-md-floating-label" style="margin: 0 0 25px;">
                     <div class="input-icon">
                         <input type="text" class="form-control" id="keyword_objek">
-                        <label>Pencarian</label>
+                        <label>Temukan lokasi lainnya!</label>
+                        <!--<label>Pencarian</label>-->
                         <i class="fa fa-search"></i>
                         <span class="help-block">Tekan "Enter" untuk mulai pencarian</span>
                     </div>
@@ -17,7 +19,7 @@
                         <h4 class="panel-title">
                             <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#mob_panel_kategori" href="#mob_panel_kategori_list"> 
                                 <h5>
-                                    <strong><i class="fa fa-bars"></i>&nbsp;&nbsp;Objek</strong> 
+                                    <strong><i class="fa fa-globe"></i>&nbsp;&nbsp;Wisata Kebumen</strong>
                                     <span class="jml_objek_master">
                                         <button type="button" class="btn white btn-block btn-xs" id="jml_all_objek"></button>
                                     </span>
@@ -30,7 +32,7 @@
                             <div class="form-group" style="margin-bottom: 5px;">
                                 <div class="input-icon">
                                     <i class="fa fa-search"></i>
-                                    <input type="text" class="form-control" id="keyword_objek_mobile" placeholder="Pencarian ...">
+                                    <input type="text" class="form-control" id="keyword_objek_mobile" placeholder="Temukan lokasi lainnya!">
                                 </div>
                             </div>
                         </div>
@@ -63,18 +65,20 @@
                 <div class="hidden-lg hidden-md" style="margin-top: 5px; display: none;" id="tombol_info_mobile">
                     <div class="btn-group btn-group-justified">
                         <a href="#modal-info-kontributor" class="btn btn-sm" role="button" data-toggle="modal">
-                            <i class="fa fa-user"></i>&nbsp;&nbsp;Kontributor 
+                            <i class="fa fa-users"></i>&nbsp;&nbsp;Kontributor 
                         </a>
-                        <a href="http://lewatlawet.com/" class="btn btn-sm" target="_blank"> 
-                            <i class="fa fa-gift"></i>&nbsp;&nbsp;Merchandise 
+                        <a href="#modal-info-tentang" class="btn btn-sm" role="button" data-toggle="modal">
+                            <i class="fa fa-info-circle"></i>&nbsp;&nbsp;Info Aplikasi 
                         </a>
+                        
                     </div>        
                     <div class="btn-group btn-group-justified">
-                        <a href="#modal-info-tentang" class="btn btn-sm" role="button" data-toggle="modal">
-                            <i class="fa fa-building"></i>&nbsp;&nbsp;Tentang 
+                        <a href="https://tees.co.id/stores/kebu.men/" class="btn btn-sm" target="_blank"> 
+                        <!--<a href="http://lewatlawet.com/" class="btn btn-sm" target="_blank">--> 
+                            <i class="fa fa-shopping-cart"></i>&nbsp;&nbsp;Merchandise 
                         </a>
                         <a href="#modal-info-hubungi" class="btn btn-sm" role="button" data-toggle="modal">
-                            <i class="fa fa-phone"></i>&nbsp;&nbsp;Hubungi 
+                            <i class="fa fa-whatsapp"></i>&nbsp;&nbsp;Hubungi Kami
                         </a>
                     </div>        
                 </div>
@@ -175,7 +179,7 @@
                             show_akomodasi = true;
                             // var str_akomodasi   = '<h5 class="akomodasi_label_cari"><hr/><strong>Akomodasi</strong></h5>';
                             // $('#acc_list_objek').append(str_akomodasi);
-                            var str_akomodasi_link  =   '<strong>Akomodasi</strong>' +
+                            var str_akomodasi_link  =   '<strong>Akomodasi Wisata</strong>' +
                                                         '<span class="jml_objek" style="margin-top: 0px;">' +
                                                             // '<div class="btn-group btn-group-xs btn-group-justified">' +
                                                                 // '<button type="button" class="btn white">' + x.jml_data + '</button>' +
@@ -193,19 +197,23 @@
                                                     '</div>';
                             $('#acc_list_objek').append(str_akomodasi);
 
-                            group_show[x.jenis] = false; //default tidak tampil
+                            group_show[x.jenis] = false; //default tidak tampil marker
                         }
                         else if(x.jenis == 'objek' && show_objek == false)
                         {
                             show_objek = true;
                             // var str_akomodasi   = '<h5 class="akomodasi_label_cari"><hr/><strong>Akomodasi</strong></h5>';
                             // $('#acc_list_objek').append(str_akomodasi);
-                            var str_objek_link  =   '<strong>Objek Wisata</strong>' +
+                            var str_objek_link  =   '<strong>Daftar kategori lokasi wisata</strong>' +
                                                         '<span class="jml_objek" style="margin-top: 0px;">' +
-                                                            // '<div class="btn-group btn-group-xs btn-group-justified">' +
-                                                                // '<button type="button" class="btn white">' + x.jml_data + '</button>' +
-                                                                '<button type="button" class="btn btn-info btn-xs btn-block" id="btn_hide_show" onclick="show_hide_jenis(\'' + x.jenis + '\')"><i class="fa fa-eye" style="margin: 0px;"></i></button>' +
-                                                            // '</div>' +
+                                                            //draft '<div class="btn-group btn-group-xs btn-group-justified">' +
+                                                                //draft '<button type="button" class="btn white">' + x.jml_data + '</button>' +
+                                                                
+                                                                //Buttons below have been intentional hidden, the actual function to hide all the markers of the main map.
+                                                                //'<button type="button" class="btn btn-info btn-xs btn-block" id="btn_hide_show" onclick="show_hide_jenis(\'' + x.jenis + '\')"><i class="fa fa-eye" style="margin: 0px;"></i></button>' +
+								//'<button type="button" class="btn btn-info btn-xs btn-block" id="btn_hide_show" onclick="show_hide_jenis(\'' + x.jenis + '\')"><i class="fa fa-eye" style="margin: 0px;"></i></button>' +
+
+                                                            //draft '</div>' +
                                                         '</span>';
 
                             var str_objek   = '<div class="panel panel-default" id="objek_header" style="margin-bottom: 10px;">' +
@@ -217,7 +225,7 @@
                                                     '</div>';
                             $('#acc_list_objek').append(str_objek);
 
-                            group_show[x.jenis] = true; //default tampil
+                            group_show[x.jenis] = true; //default tampil marker
                         }
 
                         /* Panel Template */
@@ -278,10 +286,13 @@
                             marker_index = (markers.length - 1);
                             
                             /* Marker Info */
-                            var info     = '<div class="text-center"><img src="' + y.foto + '" class="thumbnails" width="150px"><br/>';
-                            info    += '<strong>' + y.nama + '</strong></div><hr style="margin: 5px 0px;"/>';
-                            info    += '<button class="btn btn-block blue btn-sm" onclick="petunjukArah(' + marker_index + ')"><i class="fa fa-map-signs"></i> Petunjuk Arah</button>';
-                            info    += '<button class="btn btn-block blue btn-sm" onclick="informasiObjek(' + y.objek_id + ',' + marker_index + ')"><i class="fa fa-info"></i> Informasi Objek</button>';
+                            var 
+                            info     = '<div class="text-center"><!--<img src="' + y.foto + '" class="thumbnails" width="150px">--><br/>';
+                            info    += '<strong>' + y.nama + '</strong></div><br/><!--<hr style="margin: 5px 0px;"/>-->';
+                            info    += '<div class="btn-group btn-group-sm">';
+                            info    += '<button type="button" class="btn btn-info btn-sm" onclick="informasiObjek(' + y.objek_id + ',' + marker_index + ')"><i class="fa fa-info-circle"></i> Info</button>';
+                            info    += '<button type="button" class="btn btn-success btn-sm" onclick="petunjukArah(' + marker_index + ')"><i class="fa fa-arrow-right"></i> Rute</button>';
+                            info    += '</div>';
                             /* End Of Marker Info */
 
                             markers_info.push(info);
