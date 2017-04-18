@@ -683,3 +683,12 @@ body.page-md {
         height: auto;
     }
 }
+
+.profil-card {
+    margin: 15px 10px;
+    padding: 10px!important;
+}
+
+.profil-card img {
+    border-radius: 5px;
+}

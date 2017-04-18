@@ -309,29 +309,8 @@
                             $('#preloader').delay(350).fadeOut('slow');
                 $('html').removeClass('is-loading');
             });
-
-            $(document).ready(function() {
-
-            });
         </script>
 
-        <script>
-
-            function lazyLoad(){
-                var $images = $('.lazy_load');
-
-                $images.each(function(){
-                    var $img = $(this),
-                        src = $img.attr('data-src');
-
-                    $img
-                        .on('load',imgLoaded($img[0]))
-                        .attr('src',src);
-                    });
-                };
-
-        </script>
-        
        
         
     </body>
