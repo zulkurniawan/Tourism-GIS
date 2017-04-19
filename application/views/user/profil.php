@@ -39,15 +39,25 @@
             </div>
         </div>
         -->
-    	<div class="col-md-12">
-            <a href="<?=site_url()?>" class="btn btn-sm grey" style="margin-right: 5px;margin-bottom: 10px;margin-top: 20px;">
+    	<div class="col-md-10 col-md-offset-1">
+            <div class="portlet-title"><br/>
+            <!--<a href="<?=site_url()?>" class="btn btn-sm grey" style="margin-right: 5px;margin-bottom: 10px;margin-top: 20px;">
                 <i class="fa fa-home"></i><span class="hidden-xs hidden-sm"> Beranda</span>
             </a>
-            
             <a data-toggle="modal" href="#bagikan_halaman" class="btn btn-sm btn-info" style="margin-left: 5px;margin-bottom: 10px;margin-top: 20px;">
                 <i class="fa fa-share-alt"></i><span class="hidden-xs hidden-sm"> Bagikan Profil</span>
-            </a>
-            
+            </a>-->
+	    <a href="<?=site_url()?>" class="btn btn-sm grey">
+	    	<i class="fa fa-home"></i> Beranda
+	    </a>
+            <a data-toggle="modal" href="#bagikan_halaman" class="btn btn-sm btn-info pull-right">
+	    	<i class="fa fa-share-alt"></i> Bagikan
+	    </a><hr/>
+		<div class="caption" style="margin-bottom: 20px;">
+	            <i class="fa fa-user"></i>
+	            <span class="caption-subject bold ">&nbsp;&nbsp;Profil Kontributor</span>
+	        </div>
+            </div>
             <div class="portlet light card-new">
                 <div class="portlet-body form">
                     <div class="row--flex">
