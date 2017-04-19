@@ -9,9 +9,9 @@
 			    	<a data-toggle="modal" href="#bagikan_halaman" class="btn btn-sm btn-info pull-right">
 			    		<i class="fa fa-share-alt"></i> Bagikan
 			    	</a>
-					<hr/>
+				    <hr/>
 			        <div class="caption" style="margin-bottom: 20px;">
-			            <i class="fa fa-user"></i>
+			            <i class="fa fa-users"></i>
 			            <span class="caption-subject bold uppercase">&nbsp;&nbsp;Kontributor</span>
 			        </div>
 			    </div>
