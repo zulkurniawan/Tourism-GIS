@@ -52,3 +52,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] 	= 'home';
 $route['404_override'] 			= '';
 $route['translate_uri_dashes'] 	= FALSE;
+
+/* Change the URL pattern */
+$route['wisata/(:any)'] = 'objek/index/$1';
+$route['profil/(:any)'] = 'user/profil/$1';
+
+$route['admin'] = 'user/profil/1';
