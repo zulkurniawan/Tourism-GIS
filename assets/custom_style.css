@@ -692,3 +692,7 @@ body.page-md {
 .profil-card img {
     border-radius: 10px;
 }
+
+.portlet_objek_wisata {
+    box-shadow: none!important;
+}
