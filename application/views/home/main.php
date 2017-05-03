@@ -1,4 +1,6 @@
-<div id="map"></div>
+<!--<div id="map"></div>-->
+<div id="map" style="height:100%;width:100%;margin:0 auto;"></div>
+
 <div id="page">
     <?php if(!empty($msg)){ ?>
         <div class="col-md-12 hidden-xs">
@@ -6,18 +8,81 @@
         </div>
     <?php } ?>
     <div class="col-md-4 col-lg-3 col-sm-5 home-content">
-        <?php if(!empty($login_status)){ ?>
+    <!--    <?php if(!empty($login_status)){ ?>
             <a href="<?=site_url('panel/dashboard')?>" class="btn btn-info btn-block hidden-md hidden-lg"> 
                 Masuk Panel&nbsp;<i class="fa fa-sign-in"></i>
             </a>
-        <?php } ?>
+        <?php } ?> -->
     	<?php $this->load->view('home/widget_cari_objek'); ?>
     	<?php $this->load->view('home/widget_petunjuk_arah'); ?>
         <?php $this->load->view('home/widget_informasi_objek'); ?>
         <?php $this->load->view('home/widget_info'); ?>
     </div> 
 </div>
+
 <script type="text/javascript">
+    var map, myloc = {};
+    $(document).ready(function(){
+        map = new google.maps.Map(document.getElementById('map'), {
+            styles		: myStyles,
+            center          : <?=$this->config->item('map_center_coordinat')?>,
+            zoom            : <?=$this->config->item('map_zoom')?>,
+            mapTypeControl  : true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                position: google.maps.ControlPosition.BOTTOM_CENTER
+            },
+            mapTypeId	    : 'roadmap',
+            streetViewControl	: false, 
+            streetViewControlOptions: { 
+	        position: google.maps.ControlPosition.TOP_LEFT 
+    	    }, 
+            fullscreenControl	: false,
+            fullscreenControlOptions: {
+            	position: google.maps.ControlPosition.LEFT_TOP
+            },
+            zoomControl     : false,
+            zoomControlOptions	: {
+        	position: google.maps.ControlPosition.LEFT_CENTER
+    	    },
+            scaleControl	: false,
+            rotateControl	: false
+        });
+
+        if (navigator.geolocation) 
+        {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                myloc = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+            }, function() {
+                // handleLocationError(true, infoWindow, map.getCenter());
+            });
+        }
+    });
+
+    var markers 	 = [], 
+    	markers_info 	 = [], 
+    	LatLngList 	 = [], 
+    	infowindow 	 = new google.maps.InfoWindow();	
+
+    function setMapOnAll(map) 
+    {
+        for (var i = 0; i < markers.length; i++) {
+            markers[i].setMap(map);
+        }
+    }
+
+    function deleteMarkers() 
+    {
+        setMapOnAll(null);
+        markers         = [];
+        markers_info    = [];
+        LatLngList      = [];
+    }    
+
     var myStyles =[
 	  {elementType: 'geometry', stylers: [{color: '#ebe3cd'}]},
           {elementType: 'labels.text.fill', stylers: [{color: '#523735'}]},
@@ -133,70 +198,6 @@
 	    elementType: "labels",
 	    stylers: [{ visibility: "off" }]
     	  }
-    
 ];
-
-
-    var map, myloc = {};
-    $(document).ready(function(){
-        map = new google.maps.Map(document.getElementById('map'), {
-            mapTypeId	    : 'terrain',
-            mapTypeControl  : true,
-            mapTypeControlOptions: {
-                style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
-                position: google.maps.ControlPosition.TOP_RIGHT
-            },
-            fullscreenControl	: true,
-            fullscreenControlOptions: {
-            	position: google.maps.ControlPosition.RIGHT_TOP
-            },
-            streetViewControl	: true,
-            streetViewControlOptions: {
-	        position: google.maps.ControlPosition.RIGHT_CENTER
-    	    },
-            center          : <?=$this->config->item('map_center_coordinat')?>,
-            zoom            : <?=$this->config->item('map_zoom')?>,
-            zoomControl     : true,
-            zoomControlOptions	: {
-        	position: google.maps.ControlPosition.RIGHT_CENTER
-    	    },
-            scaleControl	: true,
-            rotateControl	: true,
-            styles		: myStyles
-        });
-
-        if (navigator.geolocation) 
-        {
-            navigator.geolocation.getCurrentPosition(function(position) {
-                myloc = {
-                    lat: position.coords.latitude,
-                    lng: position.coords.longitude
-                };
-
-            }, function() {
-                // handleLocationError(true, infoWindow, map.getCenter());
-            });
-        }
-    });
-
-    var markers 	 = [], 
-    	markers_info = [], 
-    	LatLngList 	 = [], 
-    	infowindow 	 = new google.maps.InfoWindow();	
-
-    function setMapOnAll(map) 
-    {
-        for (var i = 0; i < markers.length; i++) {
-            markers[i].setMap(map);
-        }
-    }
-
-    function deleteMarkers() 
-    {
-        setMapOnAll(null);
-        markers         = [];
-        markers_info    = [];
-        LatLngList      = [];
-    }    
 
 </script>
