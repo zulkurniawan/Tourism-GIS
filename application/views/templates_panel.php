@@ -37,32 +37,33 @@
     <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo  page-md">
         <div class="page-header navbar navbar-fixed-top">
             <div class="page-header-inner ">
-                <div class="page-logo">
+                <div class="page-top">
+            <!--<div class="page-logo">
                     <a href="<?=site_url()?>">
                         <img src="<?=base_url()?>/assets/layouts/layout4/img/logo-light.png" alt="logo" class="logo-default" /> 
                     </a>
-                </div>
-                <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
-                <div class="page-top">
+                </div> -->
                     <div class="top-menu">
+                        
+                        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>
+                        
                         <ul class="nav navbar-nav pull-right">
                             <li class="dropdown dropdown-user">
-                                <!-- <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> -->
-                                <a href="<?=site_url('panel/profil')?>" class="dropdown-toggle">
-                                <!--<a href="javascript:;" class="dropdown-toggle">-->
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                     <span class="username"> <?=$nama_user?> </span>&nbsp;&nbsp;
                                     <img alt="" class="img-rounded" src="<?=load_foto_user($foto_user)?>" /> 
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
-                                    <li>
-                                        <a href="<?=site_url('profil')?>">
-                                            <i class="icon-user"></i> Profil </a>
-                                    </li>
+                                    <br/><li>
+                                        <a href="<?=site_url('panel/profil')?>">
+                                            <i class="icon-user"></i> Profil Saya
+                                        </a>
+                                    </li><br/>
                                     <li>
                                         <a href="<?=site_url('API/auth/logout')?>">
                                             <i class="icon-logout"></i> Logout 
                                         </a>
-                                    </li>
+                                    </li><br/>
                                 </ul>
                             </li>
                         </ul>
@@ -77,11 +78,11 @@
                     <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
                         <li class="nav-item start <?=@$page_active == 'dashboard' ? 'active' : ''?>">
                             <a href="<?=site_url('panel/dashboard')?>" class="nav-link">
-                                <i class="icon-speedometer"></i>
-                                <span class="title">Dashboard</span>
+                                <i class="icon-wrench"></i>
+                                <span class="title">Control Panel</span>
                             </a>
                         </li>
-                        <li class="nav-item <?=@$page_active == 'profil' ? 'active' : ''?>">
+                        <!--<li class="nav-item <?=@$page_active == 'profil' ? 'active' : ''?>">
                             <a href="<?=site_url('panel/profil')?>" class="nav-link">
                                 <i class="icon-user"></i>
                                 <span class="title">Profil Saya</span>
@@ -101,58 +102,58 @@
                                     <span class="title">Top Kontributor</span>
                                 </a>
                             </li>
-                        <?php } ?>
+                        <?php } ?>-->
                         <li class="nav-item start ">
                             <a href="<?=site_url()?>" class="nav-link">
-                                <i class="icon-link"></i>
-                                <span class="title">Website Utama</span>
+                                <i class="icon-globe"></i>
+                                <span class="title">Peta Wisata</span>
                             </a>
                         </li>
-                        <li class="nav-item start ">
+                        <!--<li class="nav-item start ">
                             <a href="<?=site_url('API/auth/logout')?>" class="nav-link">
                                 <i class="icon-logout"></i>
                                 <span class="title">Logout</span>
                             </a>
-                        </li>
+                        </li>-->
                         <?php if($login_level == 'Administrator' || $login_level == 'Partners'){ ?>
                             <li class="heading"><h3 class="uppercase">Statistik</h3></li>
                             <li class="nav-item <?=@$page_active == 'statistik_objek' ? 'active' : ''?>">
                                 <a href="<?=site_url('panel/statistik_objek')?>" class="nav-link ">
                                     <i class="icon-bar-chart"></i>
-                                    <span class="title">Objek</span>
+                                    <span class="title">Lokasi Wisata</span>
                                 </a>
                             </li>
                             <li class="nav-item <?=@$page_active == 'statistik_akomodasi' ? 'active' : ''?>">
                                 <a href="<?=site_url('panel/statistik_akomodasi')?>" class="nav-link ">
                                     <i class="icon-bar-chart"></i>
-                                    <span class="title">Akomodasi</span>
+                                    <span class="title">Bisnis Akomodasi</span>
                                 </a>
                             </li>
                             <li class="nav-item <?=@$page_active == 'statistik_web' ? 'active' : ''?>">
                                 <a href="<?=site_url('panel/statistik_web')?>" class="nav-link ">
                                     <i class="icon-bar-chart"></i>
-                                    <span class="title">Visitor</span>
+                                    <span class="title">Pemirsa Peta</span>
                                 </a>
                             </li>
                         <?php } ?>
                         <?php if($login_level == 'Administrator' || $login_level == 'Kontributor'){ ?>
                             <li class="heading"><h3 class="uppercase">Kontributor</h3></li>
-                            <li class="nav-item <?=@$page_active == 'objek' ? 'active' : ''?>">
-                                <a href="<?=site_url('panel/objek')?>" class="nav-link ">
-                                    <i class="icon-pointer"></i>
-                                    <span class="title">Objek Wisata</span>
+                            <li class="nav-item <?=@$page_active == 'galeri' ? 'active' : ''?>">
+                                <a href="<?=site_url('panel/galeri')?>" class="nav-link ">
+                                    <i class="icon-camera"></i>
+                                    <span class="title">Upload Foto</span>
                                 </a>
                             </li>
                             <li class="nav-item <?=@$page_active == 'artikel' ? 'active' : ''?>">
                                 <a href="<?=site_url('panel/artikel')?>" class="nav-link ">
                                     <i class="icon-list"></i>
-                                    <span class="title">Artikel</span>
+                                    <span class="title">Tulis Artikel</span>
                                 </a>
                             </li>
-                            <li class="nav-item <?=@$page_active == 'galeri' ? 'active' : ''?>">
-                                <a href="<?=site_url('panel/galeri')?>" class="nav-link ">
-                                    <i class="icon-camera"></i>
-                                    <span class="title">Galeri Foto</span>
+                            <li class="nav-item <?=@$page_active == 'objek' ? 'active' : ''?>">
+                                <a href="<?=site_url('panel/objek')?>" class="nav-link ">
+                                    <i class="icon-pointer"></i>
+                                    <span class="title">Info Lokasi</span>
                                 </a>
                             </li>
                         <?php } ?>
@@ -161,19 +162,19 @@
                             <li class="nav-item <?=@$sub_page_active == 'akomodasi_objek' ? 'active' : ''?>">
                                 <a href="<?=site_url('panel/akomodasi_objek')?>" class="nav-link ">
                                     <i class="icon-pointer"></i>
-                                    <span class="title">Objek Akomodasi</span>
+                                    <span class="title">Informasi Bisnis</span>
                                 </a>
                             </li>
                             <li class="nav-item <?=@$sub_page_active == 'akomodasi_artikel' ? 'active' : ''?>">
                                 <a href="<?=site_url('panel/akomodasi_artikel')?>" class="nav-link ">
                                     <i class="icon-list"></i>
-                                    <span class="title">Artikel Bisnis</span>
+                                    <span class="title">Artikel Produk</span>
                                 </a>
                             </li>
                             <li class="nav-item <?=@$sub_page_active == 'akomodasi_galeri' ? 'active' : ''?>">
                                 <a href="<?=site_url('panel/akomodasi_galeri')?>" class="nav-link ">
                                     <i class="icon-camera"></i>
-                                    <span class="title">Galeri Foto</span>
+                                    <span class="title">Foto Produk</span>
                                 </a>
                             </li>
                         <?php } ?>
@@ -277,6 +278,45 @@
                                 </ul>
                             </li>                       
                         <?php } ?>
+                        
+                        <li class="heading"><h3 class="uppercase">Akun</h3></li>
+                            <li class="nav-item <?=@$page_active == 'kategori' ? 'active' : ''?>">
+                                <a href="javascript:;" class="nav-link nav-toggle">
+                                    <i class="icon-user"></i>
+                                    <span class="title">Akun Saya</span>
+                                    <span class="arrow"></span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="nav-item <?=@$sub_page_active == 'kategori_wisata' ? 'active' : ''?>">
+                                        <a href="<?=site_url('panel/profil')?>" class="nav-link">
+                                            <i class="icon-user"></i>
+                                            <span class="title">Profil Saya</span>
+                                        </a>
+                                    </li>
+                                <?php if($login_level == 'Kontributor'){ ?>
+                                    <li class="nav-item <?=@$page_active == 'poin' ? 'active' : ''?>">
+                                        <a href="<?=site_url('panel/poin')?>" class="nav-link">
+                                            <i class="icon-pie-chart"></i>
+                                            <span class="title">Poin Saya</span>
+                                        </a>
+                                    </li>
+                                <?php } else { ?>
+                                    <li class="nav-item <?=@$page_active == 'poin' ? 'active' : ''?>">
+                                        <a href="<?=site_url('panel/poin/top')?>" class="nav-link">
+                                            <i class="icon-users"></i>
+                                            <span class="title">Kontributor Lainnya</span>
+                                        </a>
+                                    </li>
+                                <?php } ?>
+                                    
+                                </ul>
+                                <li class="nav-item <?=@$sub_page_active == 'kategori_akomodasi' ? 'active' : ''?>">
+                                    <a href="<?=site_url('API/auth/logout')?>" class="nav-link">
+                                        <i class="icon-arrow-left"></i>
+                                        <span class="title">Logout</span>
+                                    </a>
+                                </li>
+                            </li>
                     </ul>
                 </div>
             </div>
