@@ -314,7 +314,7 @@
         </div>
 	</div>
     <div class="caption">
-        <?php if($this->login_level == 'Kontributor'){ ?>
+        <?php if($login_level == 'Administrator' || $login_level == 'Kontributor'){ ?>
             <div class="col-md-9">
                 <div class="portlet light">
                     <div class="portlet-title">
