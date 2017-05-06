@@ -4,7 +4,7 @@
             <div class="portlet-title">
                 <div class="caption">
                     <i class="icon-list"></i>
-                    <span class="caption-subject bold uppercase"> D a s h b o a r d</span>
+                    <span class="caption-subject bold uppercase"> Control Panel</span>
                 </div>
             </div>
             <div class="portlet-body">
@@ -308,22 +308,6 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-3" style="margin-bottom: 5px;">
-                            <div class="dashboard-stat default">
-                                <div class="visual">
-                                    <i class="fa fa-thumbs-up"></i>
-                                </div>
-                                <div class="details">
-                                    <div class="number">
-                                        <span data-counter="counterup" data-value="<?=$poin?>"><?=@$poin?></span>
-                                    </div><br/><br/>
-                                    <div class="desc"> Kontributor Peta Wisata</div>
-                                </div>
-                                <a class="more" href="<?=site_url('panel/poin/top')?>"> Lihat Profil Mereka
-                                    <i class="m-icon-big-swapup m-icon-white"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 <?php } ?>
             </div>
@@ -336,7 +320,7 @@
                     <div class="portlet-title">
                         <div class="caption">
                             <i class="icon-list"></i>
-                            <span class="caption-subject bold uppercase">Top Kontributor</span>
+                            <span class="caption-subject bold uppercase">Poin Terbanyak Saat ini</span>
                         </div>
                     </div>
                     <div class="portlet-body">
@@ -379,7 +363,7 @@
                     <div class="portlet-title">
                         <div class="caption">
                             <i class="icon-list"></i>
-                            <span class="caption-subject bold uppercase">Wisata Terpopuler</span>
+                            <span class="caption-subject bold uppercase"> Lokasi Wisata Terpopuler</span>
                         </div>
                     </div>
                     <div class="portlet-body">
@@ -387,7 +371,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Nama</th>
+                                        <th>Nama Lokasi Wisata</th>
                                         <th class="text-center">Viewer</th>
                                     </tr>
                                 </thead>
