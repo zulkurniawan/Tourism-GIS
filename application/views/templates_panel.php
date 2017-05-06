@@ -299,23 +299,24 @@
                                             <i class="icon-pie-chart"></i>
                                             <span class="title">Poin Saya</span>
                                         </a>
-                                    </li>
-                                <?php } else { ?>
-                                    <li class="nav-item <?=@$page_active == 'poin' ? 'active' : ''?>">
+                                    </li><hr/>
+                                    <!-- <li class="nav-item <?=@$page_active == 'poin' ? 'active' : ''?>">
                                         <a href="<?=site_url('panel/poin/top')?>" class="nav-link">
                                             <i class="icon-users"></i>
                                             <span class="title">Kontributor Lainnya</span>
                                         </a>
-                                    </li>
-                                <?php } ?>
+                                    </li> -->
+                                <?php } else { ?>
                                     
-                                </ul>
+                                <?php } ?>
                                 <li class="nav-item <?=@$sub_page_active == 'kategori_akomodasi' ? 'active' : ''?>">
                                     <a href="<?=site_url('API/auth/logout')?>" class="nav-link">
                                         <i class="icon-arrow-left"></i>
                                         <span class="title">Logout</span>
                                     </a>
                                 </li>
+                                </ul>
+                                
                             </li>
                     </ul>
                 </div>
