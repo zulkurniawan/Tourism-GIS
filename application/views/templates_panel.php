@@ -78,8 +78,8 @@
                     <ul class="page-sidebar-menu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
                         <li class="nav-item start <?=@$page_active == 'dashboard' ? 'active' : ''?>">
                             <a href="<?=site_url('panel/dashboard')?>" class="nav-link">
-                                <i class="icon-wrench"></i>
-                                <span class="title">Control Panel</span>
+                                <i class="fa fa-cog"></i>
+                                <span class="title">Dashboard</span>
                             </a>
                         </li>
                         <!--<li class="nav-item <?=@$page_active == 'profil' ? 'active' : ''?>">
@@ -138,6 +138,12 @@
                         <?php } ?>
                         <?php if($login_level == 'Administrator' || $login_level == 'Kontributor'){ ?>
                             <li class="heading"><h3 class="uppercase">Kontributor</h3></li>
+                            <li class="nav-item <?=@$page_active == 'objek' ? 'active' : ''?>">
+                                <a href="<?=site_url('panel/objek')?>" class="nav-link ">
+                                    <i class="icon-pointer"></i>
+                                    <span class="title">Info Lokasi</span>
+                                </a>
+                            </li>
                             <li class="nav-item <?=@$page_active == 'galeri' ? 'active' : ''?>">
                                 <a href="<?=site_url('panel/galeri')?>" class="nav-link ">
                                     <i class="icon-camera"></i>
@@ -150,12 +156,6 @@
                                     <span class="title">Tulis Artikel</span>
                                 </a>
                             </li>
-                            <li class="nav-item <?=@$page_active == 'objek' ? 'active' : ''?>">
-                                <a href="<?=site_url('panel/objek')?>" class="nav-link ">
-                                    <i class="icon-pointer"></i>
-                                    <span class="title">Info Lokasi</span>
-                                </a>
-                            </li>
                         <?php } ?>
                         <?php if($login_level == 'Administrator' || $login_level == 'Partners'){ ?>
                             <li class="heading"><h3 class="uppercase">Partners</h3></li>
@@ -165,16 +165,16 @@
                                     <span class="title">Informasi Bisnis</span>
                                 </a>
                             </li>
-                            <li class="nav-item <?=@$sub_page_active == 'akomodasi_artikel' ? 'active' : ''?>">
-                                <a href="<?=site_url('panel/akomodasi_artikel')?>" class="nav-link ">
-                                    <i class="icon-list"></i>
-                                    <span class="title">Artikel Produk</span>
-                                </a>
-                            </li>
                             <li class="nav-item <?=@$sub_page_active == 'akomodasi_galeri' ? 'active' : ''?>">
                                 <a href="<?=site_url('panel/akomodasi_galeri')?>" class="nav-link ">
                                     <i class="icon-camera"></i>
                                     <span class="title">Foto Produk</span>
+                                </a>
+                            </li>
+                            <li class="nav-item <?=@$sub_page_active == 'akomodasi_artikel' ? 'active' : ''?>">
+                                <a href="<?=site_url('panel/akomodasi_artikel')?>" class="nav-link ">
+                                    <i class="icon-list"></i>
+                                    <span class="title">Artikel Produk</span>
                                 </a>
                             </li>
                         <?php } ?>
