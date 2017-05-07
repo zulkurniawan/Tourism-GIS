@@ -4,7 +4,7 @@
             <div class="portlet-title">
                 <div class="caption">
                     <i class="icon-list"></i>
-                    <span class="caption-subject bold uppercase"> Control Panel</span>
+                    <span class="caption-subject bold uppercase"> Dashboard</span>
                 </div>
             </div>
             <div class="portlet-body">
@@ -21,8 +21,8 @@
                                     </div>
                                     <div class="desc"> User</div>
                                 </div>
-                                <a class="more" href="<?=site_url('panel/user/kontributor')?>"> Kontributor & Partner
-                                    <i class="m-icon-swapright m-icon-white"></i>
+                                <a class="more" href="<?=site_url('panel/user/kontributor')?>"> Kontributor
+                                    <i class="fa fa-mouse-pointer fa-2x"></i>
                                 </a>
                             </div>
                         </div>
@@ -37,8 +37,8 @@
                                     </div>
                                     <div class="desc"> Objek</div>
                                 </div>
-                                <a class="more" href="<?=site_url('panel/objek')?>"> Objek Wisata & Akomodasinya
-                                    <i class="m-icon-swapright m-icon-white"></i>
+                                <a class="more" href="<?=site_url('panel/objek')?>"> Lokasi Wisata
+                                    <i class="fa fa-mouse-pointer fa-2x"></i>
                                 </a>
                             </div>
                         </div>
@@ -49,10 +49,111 @@
                         <div class="portlet-title">
                             <div class="caption red">
                                 <i class="icon-bulb"></i>
-                                <span class="caption-subject bold uppercase red">Data Moderasi</span>
+                                <span class="caption-subject bold uppercase red">Moderator Panel</span>
                             </div>
                         </div>
                         <div class="portlet-body form">
+                            <div class="row">
+                                <div class="col-md-4" style="margin-bottom: 5px;">
+                                    <div class="dashboard-stat green-meadow">
+                                        <div class="visual">
+                                            <i class="fa fa-map-marker"></i>
+                                        </div>
+                                        <div class="details">
+                                            <div class="number">
+                                                <span data-counter="counterup" data-value="<?=$pending_objek?>"><?=@$pending_objek?></span>
+                                            </div>
+                                            <div class="desc"> Info Wisata </div>
+                                        </div>
+                                        <a class="more" href="<?=site_url('panel/objek?status=moderasi')?>"> Lihat
+                                            <i class="fa fa-mouse-pointer fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="margin-bottom: 5px;">
+                                    <div class="dashboard-stat yellow-casablanca">
+                                        <div class="visual">
+                                            <i class="fa fa-camera"></i>
+                                        </div>
+                                        <div class="details">
+                                            <div class="number">
+                                                <span data-counter="counterup" data-value="<?=$pending_foto?>"><?=@$pending_foto?></span>
+                                            </div>
+                                            <div class="desc"> Foto Wisata </div>
+                                        </div>
+                                        <a class="more" href="<?=site_url('panel/galeri')?>"> Lihat
+                                            <i class="fa fa-mouse-pointer fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="margin-bottom: 5px;">
+                                    <div class="dashboard-stat red-sunglo">
+                                        <div class="visual">
+                                            <i class="fa fa-pencil-square-o"></i>
+                                        </div>
+                                        <div class="details">
+                                            <div class="number">
+                                                <span data-counter="counterup" data-value="<?=$pending_artikel?>"><?=@$pending_artikel?></span>
+                                            </div>
+                                            <div class="desc"> Artikel Wisata </div>
+                                        </div>
+                                        <a class="more" href="<?=site_url('panel/artikel')?>"> Lihat
+                                            <i class="fa fa-mouse-pointer fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4" style="margin-bottom: 5px;">
+                                    <div class="dashboard-stat blue-sharp">
+                                        <div class="visual">
+                                            <i class="fa fa-briefcase"></i>
+                                        </div>
+                                        <div class="details">
+                                            <div class="number">
+                                                <span data-counter="counterup" data-value="<?=$pending_artikel?>"><?=@$pending_akomodasi?></span>
+                                            </div>
+                                            <div class="desc"> Info Bisnis </div>
+                                        </div>
+                                        <a class="more" href="<?=site_url('panel/akomodasi_objek')?>"> Lihat
+                                            <i class="fa fa-mouse-pointer fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="margin-bottom: 5px;">
+                                    <div class="dashboard-stat yellow-casablanca">
+                                        <div class="visual">
+                                            <i class="fa fa-camera"></i>
+                                        </div>
+                                        <div class="details">
+                                            <div class="number">
+                                                <span data-counter="counterup" data-value="<?=$pending_foto_akomodasi?>"><?=@$pending_foto_akomodasi?></span>
+                                            </div>
+                                            <div class="desc"> Foto Produk </div>
+                                        </div>
+                                        <a class="more" href="<?=site_url('panel/akomodasi_galeri')?>"> Lihat
+                                            <i class="fa fa-mouse-pointer fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" style="margin-bottom: 5px;">
+                                    <div class="dashboard-stat red-sunglo">
+                                        <div class="visual">
+                                            <i class="fa fa-pencil-square-o"></i>
+                                        </div>
+                                        <div class="details">
+                                            <div class="number">
+                                                <span data-counter="counterup" data-value="<?=$pending_artikel_akomodasi?>"><?=@$pending_artikel_akomodasi?></span>
+                                            </div>
+                                            <div class="desc"> Tentang Produk </div>
+                                        </div>
+                                        <a class="more" href="<?=site_url('panel/akomodasi_artikel')?>"> Lihat
+                                            <i class="fa fa-mouse-pointer fa-2x"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-12" style="margin-bottom: 5px;">
                                     <div class="dashboard-stat default">
@@ -63,112 +164,10 @@
                                             <div class="number">
                                                 <span data-counter="counterup" data-value="<?=$pending_user?>"><?=@$pending_user?></span>
                                             </div>
-                                            <div class="desc"> User</div>
+                                            <div class="desc"> Pending User</div>
                                         </div>
                                         <a class="more" href="<?=site_url('panel/user')?>"> Lihat
-                                            <i class="m-icon-swapright m-icon-white"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4" style="margin-bottom: 5px;">
-                                    <div class="dashboard-stat red-pink">
-                                        <div class="visual">
-                                            <i class="fa fa-map-marker"></i>
-                                        </div>
-                                        <div class="details">
-                                            <div class="number">
-                                                <span data-counter="counterup" data-value="<?=$pending_objek?>"><?=@$pending_objek?></span>
-                                            </div>
-                                            <div class="desc"> Objek </div>
-                                        </div>
-                                        <a class="more" href="<?=site_url('panel/objek?status=moderasi')?>"> Lihat
-                                            <i class="m-icon-swapright m-icon-white"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4" style="margin-bottom: 5px;">
-                                    <div class="dashboard-stat red-pink">
-                                        <div class="visual">
-                                            <i class="fa fa-list"></i>
-                                        </div>
-                                        <div class="details">
-                                            <div class="number">
-                                                <span data-counter="counterup" data-value="<?=$pending_artikel?>"><?=@$pending_artikel?></span>
-                                            </div>
-                                            <div class="desc"> Artikel </div>
-                                        </div>
-                                        <a class="more" href="<?=site_url('panel/artikel')?>"> Lihat
-                                            <i class="m-icon-swapright m-icon-white"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            
-                                <div class="col-md-4" style="margin-bottom: 5px;">
-                                    <div class="dashboard-stat red-pink">
-                                        <div class="visual">
-                                            <i class="fa fa-image"></i>
-                                        </div>
-                                        <div class="details">
-                                            <div class="number">
-                                                <span data-counter="counterup" data-value="<?=$pending_foto?>"><?=@$pending_foto?></span>
-                                            </div>
-                                            <div class="desc"> Foto </div>
-                                        </div>
-                                        <a class="more" href="<?=site_url('panel/galeri')?>"> Lihat
-                                            <i class="m-icon-swapright m-icon-white"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4" style="margin-bottom: 5px;">
-                                    <div class="dashboard-stat blue-soft">
-                                        <div class="visual">
-                                            <i class="fa fa-briefcase"></i>
-                                        </div>
-                                        <div class="details">
-                                            <div class="number">
-                                                <span data-counter="counterup" data-value="<?=$pending_artikel?>"><?=@$pending_akomodasi?></span>
-                                            </div>
-                                            <div class="desc"> Akomodasi </div>
-                                        </div>
-                                        <a class="more" href="<?=site_url('panel/akomodasi_objek')?>"> Lihat
-                                            <i class="m-icon-swapright m-icon-white"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4" style="margin-bottom: 5px;">
-                                    <div class="dashboard-stat blue-soft">
-                                        <div class="visual">
-                                            <i class="fa fa-list"></i>
-                                        </div>
-                                        <div class="details">
-                                            <div class="number">
-                                                <span data-counter="counterup" data-value="<?=$pending_artikel_akomodasi?>"><?=@$pending_artikel_akomodasi?></span>
-                                            </div>
-                                            <div class="desc"> Artikel Akomodasi </div>
-                                        </div>
-                                        <a class="more" href="<?=site_url('panel/akomodasi_artikel')?>"> Lihat
-                                            <i class="m-icon-swapright m-icon-white"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            
-                                <div class="col-md-4" style="margin-bottom: 5px;">
-                                    <div class="dashboard-stat blue-soft">
-                                        <div class="visual">
-                                            <i class="fa fa-image"></i>
-                                        </div>
-                                        <div class="details">
-                                            <div class="number">
-                                                <span data-counter="counterup" data-value="<?=$pending_foto_akomodasi?>"><?=@$pending_foto_akomodasi?></span>
-                                            </div>
-                                            <div class="desc"> Foto Akomodasi </div>
-                                        </div>
-                                        <a class="more" href="<?=site_url('panel/akomodasi_galeri')?>"> Lihat
-                                            <i class="m-icon-swapright m-icon-white"></i>
+                                            <i class="fa fa-spinner fa-pulse fa-2x"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -178,6 +177,22 @@
                 <?php } elseif($this->login_level == 'Kontributor') { ?>
                     <div class="row">
                     <div class="col-md-3" style="margin-bottom: 5px;">
+                        <div class="dashboard-stat green-meadow">
+                            <div class="visual">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="details">
+                                <div class="number">
+                                    <span data-counter="counterup" data-value="<?=$kontribusi_objek?>"><?=@$kontribusi_objek?></span>
+                                </div>
+                                <div class="desc"> Info Lokasi</div>
+                            </div>
+                            <a class="more" href="<?=site_url('panel/objek')?>"> Tambah / Edit
+                                <i class="fa fa-map-marker fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-bottom: 5px;">
                             <div class="dashboard-stat yellow-casablanca">
                                 <div class="visual">
                                     <i class="fa fa-camera"></i>
@@ -186,10 +201,10 @@
                                     <div class="number">
                                         <span data-counter="counterup" data-value="<?=$kontribusi_foto?>"><?=@$kontribusi_foto?></span>
                                     </div>
-                                    <div class="desc"> Foto </div>
+                                    <div class="desc"> Foto Wisata </div>
                                 </div>
-                                <a class="more" href="<?=site_url('panel/galeri')?>"> Upload Foto
-                                    <i class="m-icon-big-swapup m-icon-white"></i>
+                                <a class="more" href="<?=site_url('panel/galeri')?>"> Upload
+                                    <i class="fa fa-camera fa-2x"></i>
                                 </a>
                             </div>
                         </div>
@@ -202,26 +217,10 @@
                                     <div class="number">
                                         <span data-counter="counterup" data-value="<?=$kontribusi_artikel?>"><?=@$kontribusi_artikel?></span>
                                     </div>
-                                    <div class="desc"> Artikel </div>
+                                    <div class="desc"> Artikel Wisata </div>
                                 </div>
                                 <a class="more" href="<?=site_url('panel/artikel')?>"> Tulis Artikel
-                                    <i class="m-icon-big-swapup m-icon-white"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-3" style="margin-bottom: 5px;">
-                            <div class="dashboard-stat green-meadow">
-                                <div class="visual">
-                                    <i class="fa fa-map-marker"></i>
-                                </div>
-                                <div class="details">
-                                    <div class="number">
-                                        <span data-counter="counterup" data-value="<?=$kontribusi_objek?>"><?=@$kontribusi_objek?></span>
-                                    </div>
-                                    <div class="desc"> Info Lokasi Wisata</div>
-                                </div>
-                                <a class="more" href="<?=site_url('panel/objek')?>"> Tambah / Edit
-                                    <i class="m-icon-big-swapup m-icon-white"></i>
+                                    <i class="fa fa-pencil-square-o fa-2x"></i>
                                 </a>
                             </div>
                         </div>
@@ -234,10 +233,10 @@
                                     <div class="number">
                                         <span data-counter="counterup" data-value="<?=$poin?>"><?=@$poin?></span>
                                     </div>
-                                    <div class="desc"> Poin Kamu</div>
+                                    <div class="desc"> Poin Saya</div>
                                 </div>
-                                <a class="more" href="<?=site_url('panel/poin/top')?>"> Lihat Poin Teratas
-                                    <i class="m-icon-big-swapup m-icon-white"></i>
+                                <a class="more" href="<?=site_url('panel/poin/top')?>"> Lihat Lainnya
+                                    <i class="fa fa-thumbs-up fa-2x"></i>
                                 </a>
                             </div>
                         </div>
@@ -260,7 +259,23 @@
                     </div>
                 <?php } elseif($this->login_level == 'Partners'){ ?>
                     <div class="row">
-                        <div class="col-md-3" style="margin-bottom: 5px;">
+                        <div class="col-md-4" style="margin-bottom: 5px;">
+                            <div class="dashboard-stat blue-sharp">
+                                <div class="visual">
+                                    <i class="fa fa-briefcase"></i>
+                                </div>
+                                <div class="details">
+                                    <div class="number">
+                                        <span data-counter="counterup" data-value="<?=$kontribusi_objek?>"><?=@$kontribusi_objek?></span>
+                                    </div>
+                                    <div class="desc"> Informasi Bisnis </div>
+                                </div>
+                                <a class="more" href="<?=site_url('panel/akomodasi_objek')?>"> Tambahkan
+                                    <i class="fa fa-mouse-pointer fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="margin-bottom: 5px;">
                             <div class="dashboard-stat yellow-casablanca">
                                 <div class="visual">
                                     <i class="fa fa-camera"></i>
@@ -271,28 +286,12 @@
                                     </div>
                                     <div class="desc"> Foto Produk</div>
                                 </div>
-                                <a class="more" href="<?=site_url('panel/akomodasi_galeri')?>"> Upload Foto Produk Anda
-                                    <i class="m-icon-big-swapup m-icon-white"></i>
+                                <a class="more" href="<?=site_url('panel/akomodasi_galeri')?>"> Upload
+                                    <i class="fa fa-mouse-pointer fa-2x"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-md-3" style="margin-bottom: 5px;">
-                            <div class="dashboard-stat blue-sharp">
-                                <div class="visual">
-                                    <i class="fa fa-gift"></i>
-                                </div>
-                                <div class="details">
-                                    <div class="number">
-                                        <span data-counter="counterup" data-value="<?=$kontribusi_objek?>"><?=@$kontribusi_objek?></span>
-                                    </div>
-                                    <div class="desc"> Informasi Bisnis </div>
-                                </div>
-                                <a class="more" href="<?=site_url('panel/akomodasi_objek')?>"> Promosikan Produk Anda
-                                    <i class="m-icon-big-swapup m-icon-white"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-3" style="margin-bottom: 5px;">
+                        <div class="col-md-4" style="margin-bottom: 5px;">
                             <div class="dashboard-stat red-sunglo">
                                 <div class="visual">
                                     <i class="fa fa-pencil-square-o"></i>
@@ -301,10 +300,10 @@
                                     <div class="number">
                                         <span data-counter="counterup" data-value="<?=$kontribusi_artikel?>"><?=@$kontribusi_artikel?></span>
                                     </div>
-                                    <div class="desc"> Artikel Produk</div>
+                                    <div class="desc"> Blog Produk</div>
                                 </div>
-                                <a class="more" href="<?=site_url('panel/akomodasi_artikel')?>"> Tulis Artikel Tentang Produk
-                                    <i class="m-icon-big-swapup m-icon-white"></i>
+                                <a class="more" href="<?=site_url('panel/akomodasi_artikel')?>"> Tulis Artikel
+                                    <i class="fa fa-mouse-pointer fa-2x"></i>
                                 </a>
                             </div>
                         </div>
