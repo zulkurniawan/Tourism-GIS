@@ -55,12 +55,7 @@
     </head>
 
     <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md page-footer-fixed">
-        <div id="preloader" class="preloader-wrapper">
-            <div class="preloader">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+        
 
         <?php
             if(!empty($main_content))
@@ -69,7 +64,7 @@
             } 
         ?>      
 
-        <nav class="navbar navbar-default navbar-fixed-bottom footer">
+        <nav class="navbar navbar-default navbar-fixed-bottom footer" style="display:none;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-8 col-xs-6">
@@ -177,10 +172,10 @@
                             else
                             {
                                 $('#form-login-result').html('<div class="alert alert-success" role="alert">' + result.data + '</div>');                    
-                                window.location = "<?=site_url()?>";
+                                window.location = "<?=site_url('home')?>";
                             }
                         },
-                        error       : function(result){
+                        error : function(result){
                             $('#form-login-result').html('<?=err_msg('Gagal melakukan login.')?>');
                         }
                     })

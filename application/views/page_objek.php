@@ -1,5 +1,5 @@
 <div class="container">
-	<div class="row">
+	<div class="row artikel-detail">
 		<div class="col-md-4">
 			<div class="portlet light bordered">
 	            <div class="portlet-title">
@@ -39,36 +39,63 @@
 						</a>
                     </div>	            	
 	        	</div>
-	        </div>				            						
-			<div class="portlet light bordered">
-	            <div class="portlet-title">
-	                <div class="caption">
-	                    <i class="fa fa-road"></i>
-	                    <span class="caption-subject bold uppercase">Terdekat</span>
-	                </div>
-	            </div>
-	            <div class="portlet-body">
-					<ul class="media-list" id="objek_artikel_list">
-			            <?php foreach($data->objek_terdekat as $key => $c): ?>
-			        		<li class="media">
-				        		<a class="pull-left" href="<?=$c->link?>">
-					        		<img class="media-object thumbnails" src="<?=$c->foto?>" width="100px">
-				        		</a>
-				        		<div class="media-body">
-					        		<h4 class="media-heading"><?=$c->nama?></h4>
-					        		<h5><?=$c->jarak?> km, <i class="fa fa-user"></i>&nbsp;&nbsp;<?=$c->nama_kontributor?></h5>
-					        		<a href="<?=$c->link?>" class="btn btn-xs btn-info btn-block">
-					        			<i class="fa fa-eye"></i><span class="hidden-xs hidden-sm">&nbsp;&nbsp;Lihat</span>
-					        		</a>
-				        		</div><hr/>
-			        		</li>		
-			        	<?php endforeach; ?>
-		        	</ul>
-	        	</div>
-	        </div>				            						
+	        </div>				            									            						
 		</div>
 		<div class="col-md-8">
 			<?php if(!empty($sub_main_content)){ $this->load->view($sub_main_content); } ?>
 		</div>
 	</div>
+	
+	<!-- <div class="row">
+		<div class="portlet light bordered">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-road"></i>
+                    <span class="caption-subject bold uppercase">Terdekat</span>
+                </div>
+            </div>
+            <div class="portlet-body">
+				<ul class="media-list" id="objek_artikel_list">
+		            <?php foreach($data->objek_terdekat as $key => $c): ?>
+		        		<li class="media">
+			        		<a class="pull-left" href="<?=$c->link?>">
+				        		<img class="media-object thumbnails" src="<?=$c->foto?>" width="100px">
+			        		</a>
+			        		<div class="media-body">
+				        		<h4 class="media-heading"><?=$c->nama?></h4>
+				        		<h5><?=$c->jarak?> km, <i class="fa fa-user"></i>&nbsp;&nbsp;<?=$c->nama_kontributor?></h5>
+				        		<a href="<?=$c->link?>" class="btn btn-xs btn-info btn-block">
+				        			<i class="fa fa-eye"></i><span class="hidden-xs hidden-sm">&nbsp;&nbsp;Lihat</span>
+				        		</a>
+			        		</div><hr/>
+		        		</li>		
+		        	<?php endforeach; ?>
+	        	</ul>
+        	</div>
+        </div>	
+	</div> -->
+
+	<div class="row">
+        <div class="col-md-12">
+          <h2 class="header-new">Wisata Lainnya</h2>
+            <div class="owl-carousel owl-theme show-kontributor">
+            	<?php foreach($data->objek_terdekat as $key => $c): ?>
+                    <div class="item item__kontributor">
+                        <a class="link-wrapper" href="<?=$c->profil?>">
+                            <div class="wrapper">
+                                <div class="image">
+                                    <img src="<?=$c->foto?>" class="thumbnails" width="60%">
+                                </div>    
+                            </div>
+                            <h4 class="name__item"><?=$c-> nama?></h4>
+                            <h5><?=$c->jarak?> km, <i class="fa fa-user"></i>&nbsp;&nbsp;<?=$c->nama_kontributor?></h5>
+			        		<a href="<?=$c->link?>" class="btn btn-xs btn-info btn-block">
+			        			<i class="fa fa-eye"></i><span class="hidden-xs hidden-sm">&nbsp;&nbsp;Lihat</span>
+			        		</a>
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
 </div>

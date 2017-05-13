@@ -65,7 +65,7 @@ class User extends CI_Controller
 		{
 			$this->session->set_flashdata('msg', err_msg(validation_errors()));
 			$this->session->set_flashdata('last_data', $data_post);
-			redirect('user/register/');
+			redirect('/');
 		}
 		else
 		{
@@ -76,7 +76,7 @@ class User extends CI_Controller
 			{
 				$this->session->set_flashdata('last_data', $data_post);
 				$this->session->set_flashdata('msg', err_msg('Pendaftaran Gagal. Email pernah terdaftar, gunakan Email lainnya.'));
-				redirect('user/register');
+				redirect('/');
 			}
 			else
 			{
@@ -90,7 +90,7 @@ class User extends CI_Controller
 		            {
 						$this->session->set_flashdata('last_data', $data_post);
 						$this->session->set_flashdata('msg', err_msg($this->upload->display_errors()));
-						redirect('user/register');
+						redirect('/');
 		            }
 		            else
 		            {
@@ -204,14 +204,14 @@ class User extends CI_Controller
 
 
 					$this->session->set_flashdata('msg', suc_msg('Pendaftaran berhasil, Silahkan login untuk melanjutkan.'));
-					redirect('user/register');
+					redirect('/');
 					// $this->session->set_flashdata('msg', suc_msg('Pendaftaran berhasil, Masukkan Kode Verifikasi yang kami kirimkan via SMS. Batas waktu memasukkan kode verifikasi adalah 2 Jam. Melebihi waktu 2 jam maka pendaftaran dianggap batal.'));
 					// redirect('user/verifikasi');
 				}
 				else
 				{
 					$this->session->set_flashdata('msg', err_msg('Pendaftaran gagal, Silahkan ulangi lagi.'));					
-					redirect('user/register');
+					redirect('/');
 				}				
 			}
 		}		
