@@ -68,9 +68,11 @@ class Auth extends CI_Controller
 							}
 						}
 
+
 						$respon = array('status' 	=> '200', 
 										'data' 		=> 'Login berhasil', 
 										'msg' 		=> 'Login berhasil');
+						// redirect('home');			
 
 						$this->auth_model->update_last_login($get_data_login->user_id);
 
@@ -104,6 +106,8 @@ class Auth extends CI_Controller
 				$respon = array('status' => '201', 'data' => 'Email / No Handphone tidak valid', 'msg' => 'Login gagal.');
 			}
 		}
+		// redirect('home');			
+
 		echo json_encode($respon);
 	}
 
