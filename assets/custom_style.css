@@ -902,3 +902,17 @@ body.page-md {
     margin: 0!important;
     padding-left: 5px!important;
 }
+
+
+/*16 Mei 2017*/
+
+@media(max-width: 640px) {
+    .item__kontributor {
+        margin: 30px;
+    }
+    .header-new {
+        font-size: 24px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
