@@ -27,16 +27,14 @@
 			                                <?php } else { ?>
 			                                    <img src="<?=base_url('assets/user.png')?>" width="60%" class="thumbnails">
 			                                <?php } ?>
-			                                <!--<br/><?=label_user_verified($c, 'margin: 10px 15%; width:70%; float: left;')?>-->
+			                                <!-- <br/><?=label_user_verified($c, 'margin: 10px 15%; width:70%; float: left;')?> -->
 			                            </div>
 			                            <div class="col-md-8">
-			                                <ul class="list-group" style="margin-bottom: 0px;">
-			                                    <li class="list-group-item">
-			                                    Nama <span style="float:right; font-weight: bold"><?=$c->nama?></span></li>
+			                                <ul class="list-group" style="margin-bottom: 0px; vertical-align:middle">
 			                                    <!--<li class="list-group-item">Alamat <br/><span style="float:right; font-weight: bold"><?=$c->alamat?></span></li>-->
-			                                    <li class="list-group-item">Identitas <?=label_user_verified($c, 'float: right;')?></li>
+			                                    <li class="list-group-item"><span style="font-weight: bold"> <?=$c->nama?>  </span>  <?=label_user_verified($c, 'float: right')?></li>
 			                                    <li class="list-group-item">
-                                        			<a href="<?=$c->profil?>" class="btn btn-block btn-success btn-xs">
+                                        			<a href="<?=$c->profil?>" class="btn btn-block btn-primary">
                                            		 	   <i class="fa fa-user"></i>&nbsp;&nbsp;Lihat profil
                                         			</a>
                                     			    </li>
