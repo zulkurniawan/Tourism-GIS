@@ -381,8 +381,8 @@ function label_user_verified($param, $style = '', $add_label = '')
 	$str = '';
 	if($param->verifikasi_no_hp == 'Y')
 	{
-		$str .= '<span class="label label-info" style="' . $style . '">';
-		$str .= '<i class="fa fa-check-circle"></i> Terverifikasi';
+		$str .= '<span class="label label-success" style="' . $style . '">';
+		$str .= '<i class="fa fa-check-circle fa-lg" style="color:white"></i>';
 		if($add_label != '')
 		{
 			$str .= ' / ' . $add_label;
