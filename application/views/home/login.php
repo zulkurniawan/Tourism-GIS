@@ -1,4 +1,4 @@
-<!-- <div class="col-md-4 login">
+ <!--<div class="col-md-4 login">
 	<div class="portlet light bordered form-login">
 	    <div class="portlet-title">
 	        <div class="caption">
@@ -45,16 +45,73 @@
 
 <div class="form-login">
       
-      <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
-      </ul>
+    <ul class="tab-group">
+        <li class="tab active"><a href="#oops">Oops!</a></li>
+        <li class="tab"><a href="#login">Sign In</a></li>
+        <!-- <li class="tab"><a href="#signup">Sign Up</a></li> -->
+    </ul>
       
-      <div class="tab-content">
-        <div id="signup">   
-          <h1>Sign Up for Free</h1>
+    <div class="tab-content">
+        
+        <div id="oops">  
+            <h2>Maaf,</h2>
+            <h4>Alamat telah diubah.</h4>
+            Otomatis dialihkan ke <b>Peta Wisata Kebumen</b> dalam 60 detik ...
+            <hr/>
+            Atau klik tombol di bawah ini untuk melanjutkan sekarang juga.
+            <h5><a href="http://kebu.men" class="btn btn-success btn-lg" role="button">Peta Wisata Kebumen</a></h5>
+        </div>
+        
+        <div id="login">   
+          <h1>Maintenance</h1>
           
-          <form id="form-pendaftaran" class="form-horizontal" method="POST" action="<?=site_url('user/register_submit/')?>" enctype="multipart/form-data">
+          <form id="form-login" method="post" enctype="multipart/form-data">
+              
+                <div class="field-wrap">
+                    <!-- <label>
+                      Email / No Hp<span class="req">*</span>
+                    </label> -->
+                    <input type="text" placeholder="Username" autocomplete="off" class="form-control" required name="email">
+                    <!-- <input type="email" placeholder="Email / No HP" name="email" required autocomplete="off"/> -->
+                </div>
+          
+                <div class="field-wrap">
+                    <!-- <label>
+                        Password<span class="req">*</span>
+                    </label> -->
+                    <input type="password" placeholder="Password" name="password" required autocomplete="off"/>
+                </div>
+                <div id="form-login-result"></div>
+                <div class="input-group" style="padding-top: 10px; margin: 0px;">
+                    <span class="input-group-addon" style="text-align: left;">
+                        <input type="checkbox" id="checkbox1111" name="remember_me" value="1">
+                        Remember me.
+                    </span>
+                </div><br/><br/>
+                
+                <!-- <input type="checkbox" id="checkbox1111" class="md-check" name="remember_me" value="1"> -->
+    
+               <!--  <div class="field-wrap">
+                    <div class="md-checkbox-list" style="margin: 0px;">
+                        <div class="md-checkbox">
+                            <input type="checkbox" id="checkbox1111" class="md-check" name="remember_me" value="1">
+                            <label for="checkbox1111">
+                                <span></span>
+                                <span class="check"></span>
+                                <span class="box"></span> Simpan login
+                            </label>
+                        </div>
+                    </div>
+                </div> -->
+            <button type="submit" class="button button-block"/>Sign In</button>
+          </form>
+          
+        </div>
+        
+        <!-- <div id="signup">   
+            <h1>Sign Up for Free</h1>
+          
+                <form id="form-pendaftaran" class="form-horizontal" method="POST" action="<?=site_url('user/register_submit/')?>" enctype="multipart/form-data">
                     <?=@$msg?>
                         <div class="form-group form-md-line-input">
                         <label class="col-md-4 control-label label-daftar"><b>Daftar sebagai :</b></label>
@@ -70,37 +127,37 @@
                         <div class="col-md-12">
                             <a class="btn red hidden-md hidden-lg btn-block" data-toggle="modal" href="#ketentuan_perjanjian_modal" style="margin-bottom: 5px;"> Syarat & Ketentuan </a>
                         </div>
-                        <div class="form-group form-md-line-input">
+                        <div class="form-group form-md-line-input form-md-floating-label">
                             <!-- <label class="col-md-4 control-label" for="nama">Nama Kontributor *</label> -->
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <input type="text" class="form-control" placeholder="Nama Kontributor" name="nama" value="<?=@$data->nama?>">
                                 <div class="form-control-focus"> </div>
                             </div>
                         </div>
                         <div class="form-group form-md-line-input">
                             <!-- <label class="col-md-4 control-label"><b>Email *</b></label> -->
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <input type="email" class="form-control" placeholder="Email" name="email" value="<?=@$data->email?>">
                                 <div class="form-control-focus"> </div>
                             </div>
                         </div>
                         <div class="form-group form-md-line-input">
                             <!-- <label class="col-md-4 control-label"><b>Password *</b></label> -->
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <input type="password" placeholder="Password" class="form-control" name="password" value="">
                                 <div class="form-control-focus"> </div>
                             </div>
                         </div>
                         <div class="form-group form-md-line-input">
                             <!-- <label class="col-md-4 control-label"><b>Konfirmasi Password *</b></label> -->
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <input type="password" placeholder="Konfirmasi Password" class="form-control" name="cpassword" value="">
                                 <div class="form-control-focus"> </div>
                             </div>
                         </div>
                         <div class="form-group form-md-line-input">
                             <!-- <label class="col-md-4 control-label"><b>No. Ponsel Pribadi *</b></label> -->
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <input type="text" placeholder="No. Ponsel Pribadi" class="form-control" name="no_hp" value="<?=@$data->no_hp?>">
                                 <div class="form-control-focus"> </div>
                             </div>
@@ -138,7 +195,7 @@
                             </div>
                         </div>
                         <hr/>-->
-                        <div class="form-group form-md-line-input">
+                        <!-- <div class="form-group form-md-line-input">
                             <div class="col-md-12 col-xs-12">
                                 <button type="submit" class="btn btn-info btn-block">
                                     <i class="fa fa-check"></i>DAFTAR
@@ -146,62 +203,9 @@
                             </div>
                         </div>
                         <!--<hr/>-->
-                    </form>     
-
-        </div>
-        
-    <div id="login">   
-      <h1>Login</h1>
-      
-      <form id="form-login" method="post">
-          
-            <div class="field-wrap">
-                <!-- <label>
-                  Email / No Hp<span class="req">*</span>
-                </label> -->
-                <input type="email" placeholder="Email / No HP" name="email" required autocomplete="off"/>
-            </div>
-      
-            <div class="field-wrap">
-                <!-- <label>
-                    Password<span class="req">*</span>
-                </label> -->
-                <input type="password" placeholder="Password" name="password" required autocomplete="off"/>
-            </div>
-
-            <div id="form-login-result"></div>
-
-            <div class="input-group">
-                <span class="input-group-addon" style="text-align: left;">
-                    <input type="checkbox" id="checkbox1111" name="remember_me" value="1">
-                    Simpan Login
-                </span>
-                
-            </div>
-
-
-            <!-- <input type="checkbox" id="checkbox1111" class="md-check" name="remember_me" value="1"> -->
-
-
-           <!--  <div class="field-wrap">
-                <div class="md-checkbox-list" style="margin: 0px;">
-                    <div class="md-checkbox">
-                        <input type="checkbox" id="checkbox1111" class="md-check" name="remember_me" value="1">
-                        <label for="checkbox1111">
-                            <span></span>
-                            <span class="check"></span>
-                            <span class="box"></span> Simpan login
-                        </label>
-                    </div>
-                </div>
-            </div> -->
-
-            <button type="submit" class="button button-block"/>Log In</button>
-      
-      </form>
-
-    </div>
-        
-      </div><!-- tab-content -->
+                <!-- </form>     
+        </div> -->
+    
+    </div><!-- tab-content -->
       
 </div> <!-- /form -->

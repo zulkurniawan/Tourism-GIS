@@ -9,6 +9,7 @@
         <meta content="<?=$meta_author?>" name="author" />
         <meta content="<?=$meta_description?>" name="description" />
         <meta content="<?=$meta_keywords?>" name="keywords" />
+        <meta http-equiv="refresh" content="60; url=http://www.kebu.men/" />
 
         <!-- <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" /> -->
         <link href="<?=base_url()?>/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -56,7 +57,6 @@
 
     <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md page-footer-fixed">
         
-
         <?php
             if(!empty($main_content))
             { 
