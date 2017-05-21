@@ -39,8 +39,8 @@
 						</a>
 					</div>
 			    		<div class="btn-group btn-group-justified">
-                        			<a href="https://api.whatsapp.com/send?phone=<?=empty($data->data->kontak_handphone) ? '-' : $data->data->kontak_handphone?>&text=I'm%20interested%20in%20your%20car%20for%20sale" class="btn <?=$page_active == 'galeri' ? 'btn-info' : 'btn-default'?>">
-							<i class="fa fa-image"></i>&nbsp;&nbsp;Chat Pengelola (test)
+                        			<a href="https://api.whatsapp.com/send?phone=<?=empty($data->data->kontak_handphone) ? '-' : $data->data->kontak_handphone?>&text=Hallo,%0ASaya%20mau%20tanya%20..." class="btn <?=$page_active == 'galeri' ? 'btn-info' : 'btn-default'?>">
+							Chat Pengelola (test)&nbsp;&nbsp;<i class="fa fa-whatsapp"></i>
 						</a>
                     			</div>
 	        	</div>
