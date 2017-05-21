@@ -1,3 +1,0 @@
-<a href="https://api.whatsapp.com/send?phone=<?=empty($data->data->kontak_handphone) ? '-' : $data->data->kontak_handphone?>&text=I'm%20interested%20in%20your%20car%20for%20sale" class="btn <?=$page_active == 'galeri' ? 'btn-info' : 'btn-default'?>">
-  <i class="fa fa-image"></i><span class="hidden-xs hidden-sm">&nbsp;&nbsp;Chat Pengelola (masih percobaan)</span>
-</a>
