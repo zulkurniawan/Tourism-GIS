@@ -37,7 +37,12 @@
 						<a href="<?=site_url('galeri/index/' . $data->objek_wisata->objek_id . '-' . $data->objek_wisata->url_seo)?>" class="btn <?=$page_active == 'galeri' ? 'btn-info' : 'btn-default'?>">
 							<i class="fa fa-image"></i><span class="hidden-xs hidden-sm">&nbsp;&nbsp;Foto</span>
 						</a>
-                    </div>	            	
+					</div>
+			    		<div class="btn-group btn-group-justified">
+                        			<a target="blank" href="https://api.whatsapp.com/send?phone=<?=empty($data->data->kontak_handphone) ? '-' : $data->data->kontak_handphone?>&text=Hallo,%0ASaya%20mau%20tanya%20..." class="btn <?=$page_active == 'galeri' ? 'btn-info' : 'btn-default'?>">
+							Chat Pengelola (test)&nbsp;&nbsp;<i class="fa fa-whatsapp"></i>
+						</a>
+                    			</div>
 	        	</div>
 	        </div>				            									            						
 		</div>

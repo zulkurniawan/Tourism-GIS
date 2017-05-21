@@ -81,8 +81,9 @@
 				    <div class="portlet-body">
 		            	<ul class="list-group">
 		            		<li class="list-group-item">Email : <?=empty($data->data->kontak_email) ? '-' : $data->data->kontak_email?></li>
-		            		<li class="list-group-item">Website : <?=empty($data->data->kontak_website) ? '-' : $data->data->kontak_website?></li>
-		            		<li class="list-group-item">No Handphone : <?=empty($data->data->kontak_handphone) ? '-' : $data->data->kontak_handphone?></li>
+		            		<li class="list-group-item">Website : <a href="<?=empty($data->data->kontak_website) ? '-' : $data->data->kontak_website?>"><?=empty($data->data->kontak_website) ? '-' : $data->data->kontak_website?></a></li>
+		            		<!--<li class="list-group-item">No Handphone : <?=empty($data->data->kontak_handphone) ? '-' : $data->data->kontak_handphone?></li>-->
+		            		<li class="list-group-item">No Handphone : <a target="blank" href="https://api.whatsapp.com/send?phone=<?=empty($data->data->kontak_handphone) ? '-' : $data->data->kontak_handphone?>&text=Hallo,%0ASaya%20mau%20tanya%20..." class="btn btn-success">+<?=empty($data->data->kontak_handphone) ? '-' : $data->data->kontak_handphone?>&nbsp;&nbsp;<i class="fa fa-whatsapp fa-lg"></i></a></li>
 		            		<li class="list-group-item">Facebook : <?=empty($data->data->kontak_facebook) ? '-' : $data->data->kontak_facebook?></li>
 		            		<li class="list-group-item">Twitter : <?=empty($data->data->kontak_twitter) ? '-' : $data->data->kontak_twitter?></li>
 		            		<li class="list-group-item">Instagram : <?=empty($data->data->kontak_instagram) ? '-' : $data->data->kontak_instagram?></li>
