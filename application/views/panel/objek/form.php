@@ -253,7 +253,7 @@
 								        <label class="col-md-4 control-label">Website</label>
 								        <div class="col-md-8">
 											<div class="input-group">
-									            <input type="text" class="form-control" name="kontak_website" value="<?=@$data->kontak_website?>">
+									            <input type="text" class="form-control" name="kontak_website" placeholder="format http://xxx untuk link otomatis" value="<?=@$data->kontak_website?>">
 			                                    <span class="input-group-addon">
 			                                        <i class="fa fa-globe"></i>
 			                                    </span>
@@ -265,7 +265,7 @@
 								        <label class="col-md-4 control-label">No Handphone</label>
 								        <div class="col-md-8">
 											<div class="input-group">
-									            <input type="text" class="form-control" name="kontak_handphone" value="<?=@$data->kontak_handphone?>">
+									            <input type="text" class="form-control" name="kontak_handphone" placeholder="format 62xxx untuk WhatsApp" value="<?=@$data->kontak_handphone?>">
 			                                    <span class="input-group-addon">
 			                                        <i class="fa fa-mobile"></i>
 			                                    </span>
