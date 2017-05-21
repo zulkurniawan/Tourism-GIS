@@ -19,19 +19,22 @@ $(document).ready(function() {
         nav: true,
         responsive: {
             0: {
-                nav: false,
-                items: 1
+                nav: true,
+                items: 1,
+                margin: 30
+
             },
             640: {
-                nav: false,
-                items: 3
+                nav: true,
+                items: 3,
+                margin: 30
+
             },
             1000: {
                 items: 4
             }
         }
     });
-
 
     $('[data-appear-animation]').appear();
     $(document.body).on('appear', '[data-appear-animation]', function(e, $affected) {
@@ -57,4 +60,50 @@ $(document).ready(function() {
     //     var anim = $('#exit').val();
     //     testAnim(anim);
     // })
+
+
+    $('.form').find('input, textarea').on('keyup blur focus', function(e) {
+
+        var $this = $(this),
+            label = $this.prev('label');
+
+        if (e.type === 'keyup') {
+            if ($this.val() === '') {
+                label.removeClass('active highlight');
+            } else {
+                label.addClass('active highlight');
+            }
+        } else if (e.type === 'blur') {
+            if ($this.val() === '') {
+                label.removeClass('active highlight');
+            } else {
+                label.removeClass('highlight');
+            }
+        } else if (e.type === 'focus') {
+
+            if ($this.val() === '') {
+                label.removeClass('highlight');
+            } else if ($this.val() !== '') {
+                label.addClass('highlight');
+            }
+        }
+
+    });
+
+    $('.tab a').on('click', function(e) {
+
+        e.preventDefault();
+
+        $(this).parent().addClass('active');
+        $(this).parent().siblings().removeClass('active');
+
+        target = $(this).attr('href');
+
+        $('.tab-content > div').not(target).hide();
+
+        $(target).fadeIn(600);
+
+    });
+
+
 });

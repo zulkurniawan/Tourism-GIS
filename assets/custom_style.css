@@ -558,9 +558,12 @@ body.page-md {
 
 .show-kontributor .image {
     width: 100%;
-    height: 220px;
     overflow: hidden;
     position: relative;
+}
+
+.link-wrapper h5 {
+    text-align: center;
 }
 
 .verifikasi-label span {
@@ -695,4 +698,221 @@ body.page-md {
 
 .portlet_objek_wisata {
     box-shadow: none!important;
+}
+
+.artikel-detail {
+    margin-top: 20px;
+}
+
+.login {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 30px;
+}
+
+.form-login {
+    padding: 3em 2em 2em 2em;
+    border: 1px solid #ebebeb;
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.09804) 0px 1px 2px 0px;
+}
+
+.form-login .form-group.form-md-line-input {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+
+/*Login*/
+
+.form-login {
+    background: #fff;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.tab-group {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+}
+
+.tab-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tab-group li a {
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    background: rgba(160, 179, 176, 0.25);
+    color: rgba(0, 0, 0, 0.56);
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.tab-group li a:hover {
+    background: #659be0;
+    color: #ffffff;
+}
+
+.tab-group .active a {
+    background: #659be0;
+    color: #ffffff;
+}
+
+.tab-content > div:last-child {
+    display: none;
+}
+
+.form-login h1 {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.56);
+    font-weight: 300;
+    margin: 0 0 40px;
+}
+
+.form-login label {
+    position: absolute;
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    left: 13px;
+    color: rgba(0, 0, 0, 0.56);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size: 22px;
+}
+
+.form-login label .req {
+    margin: 2px;
+    color: #659be0;
+}
+
+.form-login label.active {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    left: 2px;
+    font-size: 14px;
+}
+
+.form-login label.active .req {
+    opacity: 0;
+}
+
+.form-login label.highlight {
+    color: #ffffff;
+}
+
+.form-login input,
+.form-login textarea {
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    background-image: none;
+    border: 1px solid #a0b3b0;
+    color: rgba(0, 0, 0, 0.56);
+    border-radius: 0;
+    -webkit-transition: border-color .25s ease, box-shadow .25s ease;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.form-login input:focus,
+.form-login textarea:focus {
+    outline: 0;
+    border-color: #659be0;
+}
+
+.form-login textarea {
+    border: 2px solid #a0b3b0;
+    resize: vertical;
+}
+
+.form-login .field-wrap {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.form-login .top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.form-login .top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+
+.form-login .top-row > div:last-child {
+    margin: 0;
+}
+
+.form-login .button {
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: #659be0;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-appearance: none;
+}
+
+.form-login .button:hover,
+.form-login .button:focus {
+    background: #179b77;
+}
+
+.form-login .button-block {
+    display: block;
+    width: 100%;
+}
+
+.form-login .forgot {
+    margin-top: -20px;
+    text-align: right;
+}
+
+.label-daftar {
+    position: relative!important;
+    text-align: left!important;
+    margin: 0!important;
+    padding-left: 5px!important;
+}
+
+
+/*16 Mei 2017*/
+
+@media(max-width: 640px) {
+    .item__kontributor {
+        margin: 30px;
+    }
+    .header-new {
+        font-size: 24px;
+        margin-bottom: 0;
+        text-align: center;
+    }
 }
